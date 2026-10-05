@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC SETTINGS
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>OJI Caravan | Your Journey. Your Home on Wheels.</title>
+
+
+    <!-- =====================================================
+         BOOTSTRAP 5
+    ====================================================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+         BOOTSTRAP ICONS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+         CUSTOM CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVBAR
+     BOOTSTRAP RESPONSIVE NAVBAR
+========================================================= -->
+
+<nav class="navbar navbar-expand-lg fixed-top oji-navbar"
+     id="mainNavbar">
+
+    <div class="container-fluid px-3 px-lg-5">
+
+
+        <!-- =================================================
+     OJI CARAVAN BRAND
+     LOGO + TEXT BESIDE LOGO
+================================================= -->
+
+<a class="navbar-brand oji-brand"
+   href="index.html">
+
+
+    <!-- ===============================
+         LOGO
+    ================================ -->
+
+        <img src="/oji_dreamlinears_logo.jpeg"
+            alt="OJI Caravan Logo"
+            class="oji-logo">
+
+
+            <!-- ===============================
+                BRAND TEXT
+            ================================ -->
+
+            <div class="brand-text">
+
+
+                <!-- MAIN BRAND NAME -->
+
+                <span class="brand-title">
+                    DREAMLINERS
+                </span>
+
+
+                <!-- SECOND BRAND NAME -->
+
+                <span class="brand-subtitle">
+                    CARAVAN
+                </span>
+
+
+            </div>
+
+
+        </a>
+
+
+
+
+        <!-- =================================================
+             BOOTSTRAP MOBILE MENU BUTTON
+        ================================================== -->
+
+        <button
+            class="navbar-toggler oji-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavigation"
+            aria-controls="mainNavigation"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- =================================================
+             NAVIGATION
+        ================================================== -->
+
+        <div class="collapse navbar-collapse"
+             id="mainNavigation">
+
+
+            <!-- =================================================
+                 BOOTSTRAP RESPONSIVE NAVIGATION
+
+                 ms-auto = pushes menu to right
+            ================================================== -->
+
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link oji-nav-link active"
+                       href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link oji-nav-link"
+                       href="about.html">
+
+                        About
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link oji-nav-link"
+                       href="Gallery.html">
+
+                        Gallery
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link oji-nav-link"
+                       href="Booking.html">
+
+                        Book Now
+
+                    </a>
+
+                </li>
+
+
+                <!-- =================================================
+                     NAVBAR BOOK BUTTON
+                ================================================== -->
+
+                <li class="nav-item mt-3 mt-lg-0">
+
+                    <a href="Booking.html"
+                       class="btn oji-nav-button">
+
+                        <i class="bi bi-calendar-check me-2"></i>
+
+                        Book Your Trip
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================================
+     SECTION 1
+     HERO VIDEO
+========================================================= -->
+
+<section class="hero-section"
+         id="home">
+
+
+    <!-- =====================================================
+         BACKGROUND VIDEO
+    ====================================================== -->
+
+    <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="assets/caravan-main.jpg">
+
+        <source
+            src="caravan.mp4"
+            type="video/mp4">
+
+    </video>
+
+
+    <!-- =====================================================
+         VIDEO OVERLAY
+    ====================================================== -->
+
+    <div class="hero-overlay"></div>
+
+
+    <!-- =====================================================
+         HERO CONTENT
+
+         Bootstrap:
+         container
+         row
+         col
+    ====================================================== -->
+
+    <div class="container hero-content">
+
+        <div class="row">
+
+            <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+
+
+                <!-- =================================================
+                     SMALL LABEL
+                ================================================== -->
+
+                <div class="hero-label">
+
+                    <span></span>
+
+                    OJI CARAVAN
+
+                </div>
+
+
+                <!-- =================================================
+                     MAIN HEADING
+
+                     CHANGE TEXT HERE
+                ================================================== -->
+
+                <h1 class="hero-title">
+
+                    Your Journey.
+
+                    <br>
+
+                    <span>
+                        Your Home on Wheels.
+                    </span>
+
+                </h1>
+
+
+                <!-- =================================================
+                     DESCRIPTION
+                ================================================== -->
+
+                <p class="hero-description">
+
+                    Experience the freedom of travelling,
+                    explore new destinations and create
+                    unforgettable memories with OJI Caravan.
+
+                </p>
+
+
+                <!-- =================================================
+                     HERO BUTTONS
+
+                     Bootstrap responsive flex
+                ================================================== -->
+
+                <div class="d-flex flex-column flex-sm-row
+                            gap-3 mt-4">
+
+
+                    <a href="Booking.html"
+                       class="btn oji-primary-btn">
+
+                        <i class="bi bi-calendar-check me-2"></i>
+
+                        Book Your Trip
+
+                    </a>
+
+
+                    <a href="https://wa.me/919490525009"
+                       target="_blank"
+                       class="btn oji-outline-btn">
+
+                        <i class="bi bi-whatsapp me-2"></i>
+
+                        WhatsApp Us
+
+                    </a>
+
+                </div>
+
+
+                <!-- =================================================
+                     HERO FEATURES
+
+                     Bootstrap responsive columns
+                ================================================== -->
+
+                <div class="row g-3 mt-3 hero-features">
+
+
+                    <div class="col-6 col-sm-3">
+
+                        <div class="hero-feature">
+
+                            <i class="bi bi-stars"></i>
+
+                            <span>
+                                Premium Travel
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-6 col-sm-3">
+
+                        <div class="hero-feature">
+
+                            <i class="bi bi-house-heart"></i>
+
+                            <span>
+                                Comfort
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-6 col-sm-3">
+
+                        <div class="hero-feature">
+
+                            <i class="bi bi-compass"></i>
+
+                            <span>
+                                Adventure
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-6 col-sm-3">
+
+                        <div class="hero-feature">
+
+                            <i class="bi bi-heart"></i>
+
+                            <span>
+                                Memories
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SCROLL INDICATOR
+    ====================================================== -->
+
+    <div class="scroll-indicator d-none d-md-flex">
+
+        <span>
+            SCROLL TO EXPLORE
+        </span>
+
+        <i class="bi bi-arrow-down"></i>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 2
+     EXPERIENCE SECTION
+
+     LEFT  = TEXT
+     RIGHT = IMAGE
+========================================================= -->
+
+<section class="experience-section"
+         id="experience">
+
+
+    <div class="container">
+
+        <div class="row align-items-center
+                    g-5">
+
+
+            <!-- =================================================
+                 LEFT CONTENT
+
+                 Bootstrap:
+                 col-lg-6
+            ================================================== -->
+
+            <div class="col-12 col-lg-6">
+
+
+                <div class="experience-content">
+
+
+                    <!-- LABEL -->
+
+                    <div class="section-label">
+
+                        <span></span>
+
+                        OUR VISION & MISSION
+
+                    </div>
+
+
+                    <!-- =================================================
+                         HEADING
+                    ================================================== -->
+
+                    <h2 class="experience-title">
+
+                        Redefining the 
+
+                        <span>
+                            Journey.
+                        </span>
+
+                    </h2>
+
+
+                    <!-- =================================================
+                         PARAGRAPHS
+                    ================================================== -->
+
+                    <p class="experience-text">
+
+                       OJI Dreamliners aims to transform luxury road travel in India by making
+                        premium, comfortable and accessible caravan experiences available to 
+                        everyone.
+
+                    </p>
+
+
+                    <p class="experience-text">
+
+                        With a vision to expand across India and build a fleet of 100+ caravans by 2030,
+                         we continuously innovate our services to meet the evolving needs of families, 
+                        corporate travelers, celebrities and modern explorers — making every journey more
+                        comfortable, memorable and truly your own.
+
+                    </p>
+
+
+                    <!-- =================================================
+                         TWO BUTTONS
+                    ================================================== -->
+
+                    <div class="d-flex flex-column
+                                flex-sm-row
+                                gap-3 mt-4">
+
+
+                        <a href="Gallery.html"
+                           class="btn oji-dark-btn">
+
+                            Explore Caravan
+
+                            <i class="bi bi-arrow-right ms-2"></i>
+
+                        </a>
+
+
+                        <a href="Booking.html"
+                           class="btn oji-light-btn">
+
+                            Book Your Trip
+
+                            <i class="bi bi-calendar-check ms-2"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RIGHT IMAGE
+            ================================================== -->
+
+            <div class="col-12 col-lg-6">
+
+
+                <div class="experience-image-box">
+
+
+                    <img
+                        src="caravan_hero.png"
+                        class="img-fluid"
+                        alt="OJI Caravan">
+
+
+                    <!-- FLOATING BADGE -->
+
+                    <div class="experience-badge">
+
+                        <strong>
+                            OJI
+                        </strong>
+
+                        <span>
+
+                            Caravan
+                            <br>
+                            Experience
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 3
+     FOUR CARDS
+========================================================= -->
+
+
+
+
+
+<!-- =========================================================
+     BOOKING CTA
+========================================================= -->
+
+<section class="booking-section"
+         id="booking">
+
+
+    <div class="container">
+
+
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-md-10 col-lg-8">
+
+
+                <div class="booking-content text-center">
+
+
+                    <div class="booking-label">
+
+                        TRAVEL PLANS FOR EVERYONE
+
+                    </div>
+
+
+                    <h2>
+
+                        1 Day Plan 
+
+                        <span>
+                            Starts at ₹25K
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Explore our specially designed caravan travel plans for families, women,
+                         senior citizens and corporate groups — created around your comfort, needs 
+                         and travel experience.
+
+                    </p>
+
+
+                    <div class="d-flex flex-column
+                                flex-sm-row
+                                justify-content-center
+                                gap-3 mt-4">
+
+<!-- 
+                        <a href="tel:+919490525009"
+                           class="btn booking-call-btn">
+
+                            <i class="bi bi-telephone-fill me-2"></i>
+
+                            Call Us
+
+                        </a> -->
+
+
+                        <a href="catgory.html"
+                           target="_blank"
+                           class="btn booking-whatsapp-btn">
+
+                            
+
+                            Explore more
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="portfolio-footer">
+
+    <div class="container">
+
+        <!-- SOCIAL ICONS -->
+        <div class="footer-social">
+
+                        
+                <a href="tel:+919490525009" aria-label="Phone">
+                    <i class="bi bi-telephone-fill"></i>
+                </a>
+
+                <a href="https://www.instagram.com/ojicaravans?stkn=djBxMjBvN2J6enly&utm_source=qr" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="https://wa.me/919490525009" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="WhatsApp">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+
+
+                <a href="https://maps.app.goo.gl/HWHen4e3oEpEvwqDA?g_st=aw" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Location">
+                    <i class="bi bi-geo-alt"></i>
+                </a>
+
+
+        </div>
+
+
+        <!-- LOCATION -->
+        <p class="footer-location">
+            We're based in
+            <span>Gunrock Enclave,Kharkhana Road, Secunderabad, Telangana</span>
+        </p>
+
+
+        <!-- DESCRIPTION -->
+        <p class="footer-description">
+            Luxury on wheels that turns travel into memories.
+        </p>
+
+
+        <!-- EMAIL -->
+        <p class="footer-contact">
+            <strong>Email:</strong>
+            <a href="mailto:info@tinkerlabs.com">
+                oji.vinayak@gmail.com
+            </a>
+        </p>
+
+
+        <!-- PHONE -->
+        <p class="footer-contact">
+            <strong>Phone:</strong>
+            <a href="tel:+919640502200">
+                +91 9490525009 
+            </a>
+        </p>
+
+
+        <!-- COPYRIGHT -->
+        <p class="footer-copyright">
+            © This website is built under
+            <a href="https://tinkerlabs.co.in/" target="_blank">
+                tinkerlabs.co.in
+            </a>
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     BOOTSTRAP JAVASCRIPT
+========================================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- =========================================================
+     CUSTOM JAVASCRIPT
+========================================================= -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
