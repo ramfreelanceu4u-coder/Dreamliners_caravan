@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin | OJI Dreamliners</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =====================================================
+           ADMIN PAGE - ALL STYLES ARE NAMESPACED
+           TO AVOID CONFLICTS WITH THE EXISTING WEBSITE.
+        ====================================================== */
+
+        .oij-admin-page {
+            min-height: 100vh;
+            padding: 120px 0 60px;
+            background: #0a0a0a;
+            color: #ffffff;
+            font-family: "DM Sans", sans-serif;
+        }
+
+        .oij-admin-page .admin-card {
+            background: #171717;
+            border: 1px solid rgba(255, 193, 7, 0.45);
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+        }
+
+        .oij-admin-page .admin-label {
+            display: inline-block;
+            color: #ffc107;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .oij-admin-page h1 {
+            margin: 0 0 10px;
+            font-size: 42px;
+            font-weight: 700;
+        }
+
+        .oij-admin-page .admin-description {
+            color: #a9a9a9;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .oij-admin-page .admin-calendar {
+            background: #202020;
+            border: 1px solid #333333;
+            border-radius: 16px;
+            padding: 20px;
+        }
+
+        .oij-admin-page .admin-calendar-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .oij-admin-page .admin-calendar-top h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .oij-admin-page .admin-arrow {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #444444;
+            border-radius: 9px;
+            background: #151515;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .oij-admin-page .admin-arrow:hover {
+            background: #ffc107;
+            color: #111111;
+            border-color: #ffc107;
+        }
+
+        .oij-admin-page .admin-weekdays,
+        .oij-admin-page .admin-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 6px;
+        }
+
+        .oij-admin-page .admin-weekdays {
+            margin-bottom: 8px;
+        }
+
+        .oij-admin-page .admin-weekdays span {
+            text-align: center;
+            color: #8e8e8e;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 5px 0;
+        }
+
+        .oij-admin-page .admin-day {
+            min-height: 48px;
+            border: 1px solid #3b3b3b;
+            border-radius: 8px;
+            background: #eaf8ef;
+            color: #1f7a45;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .oij-admin-page .admin-day:hover {
+            transform: translateY(-1px);
+            border-color: #ffc107;
+        }
+
+        .oij-admin-page .admin-day.booked {
+            background: #ff9f1c;
+            border-color: #f08c00;
+            color: #4a2700;
+        }
+
+        .oij-admin-page .admin-day.empty {
+            visibility: hidden;
+            cursor: default;
+        }
+
+        .oij-admin-page .admin-day.today {
+            box-shadow: inset 0 0 0 2px #071b45;
+        }
+
+        .oij-admin-page .admin-help {
+            margin-top: 15px;
+            padding: 13px 15px;
+            border-radius: 10px;
+            background: #111111;
+            border: 1px solid #303030;
+            color: #aaaaaa;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .oij-admin-page .admin-form-label {
+            color: #dddddd;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .oij-admin-page .admin-date-input {
+            width: 100%;
+            min-height: 48px;
+            border-radius: 9px;
+            border: 1px solid #444444;
+            background: #111111;
+            color: #ffffff;
+            padding: 10px 13px;
+        }
+
+        .oij-admin-page .admin-date-input:focus {
+            outline: none;
+            border-color: #ffc107;
+            box-shadow: 0 0 0 3px rgba(255,193,7,0.12);
+        }
+
+        .oij-admin-page .admin-btn {
+            min-height: 48px;
+            border-radius: 9px;
+            border: 1px solid #ffc107;
+            padding: 10px 18px;
+            background: #ffc107;
+            color: #111111;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .oij-admin-page .admin-btn:hover {
+            background: #ffcf3f;
+        }
+
+        .oij-admin-page .admin-btn.secondary {
+            background: transparent;
+            color: #ffffff;
+        }
+
+        .oij-admin-page .admin-btn.secondary:hover {
+            background: #ffffff;
+            color: #111111;
+        }
+
+        .oij-admin-page .booked-list {
+            margin-top: 24px;
+        }
+
+        .oij-admin-page .booked-list h3 {
+            font-size: 18px;
+            margin-bottom: 14px;
+        }
+
+        .oij-admin-page .booked-list-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .oij-admin-page .booked-date-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 10px;
+            border-radius: 8px;
+            background: #ff9f1c;
+            color: #4a2700;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .oij-admin-page .remove-date {
+            border: 0;
+            background: transparent;
+            color: #4a2700;
+            cursor: pointer;
+            font-size: 15px;
+            line-height: 1;
+            padding: 0;
+        }
+
+        .oij-admin-page .empty-list {
+            color: #8f8f8f;
+            font-size: 13px;
+        }
+
+        .oij-admin-page .admin-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .oij-admin-page .admin-status {
+            margin-top: 16px;
+            color: #9ed6b2;
+            font-size: 13px;
+            min-height: 20px;
+        }
+
+        @media (max-width: 767.98px) {
+
+            .oij-admin-page {
+                padding: 105px 0 40px;
+            }
+
+            .oij-admin-page .admin-card {
+                padding: 22px;
+                border-radius: 16px;
+            }
+
+            .oij-admin-page h1 {
+                font-size: 34px;
+            }
+
+            .oij-admin-page .admin-calendar {
+                padding: 12px;
+            }
+
+            .oij-admin-page .admin-days,
+            .oij-admin-page .admin-weekdays {
+                gap: 4px;
+            }
+
+            .oij-admin-page .admin-day {
+                min-height: 42px;
+                font-size: 12px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <main class="oij-admin-page">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-12 col-xl-9">
+
+                    <div class="admin-card">
+
+                        <span class="admin-label">
+                            OJI DREAMLINERS
+                        </span>
+
+                        <h1>
+                            Caravan Booking Admin
+                        </h1>
+
+                        <p class="admin-description">
+                            Select the dates on which the caravan is booked.
+                            Orange dates are booked and green dates are available.
+                        </p>
+
+                        <div class="row g-4">
+
+                            <div class="col-lg-7">
+
+                                <div class="admin-calendar">
+
+                                    <div class="admin-calendar-top">
+
+                                        <button
+                                            type="button"
+                                            id="adminPreviousMonth"
+                                            class="admin-arrow"
+                                            aria-label="Previous month">
+                                            <i class="bi bi-chevron-left"></i>
+                                        </button>
+
+                                        <h2 id="adminCalendarMonth">
+                                            October 2026
+                                        </h2>
+
+                                        <button
+                                            type="button"
+                                            id="adminNextMonth"
+                                            class="admin-arrow"
+                                            aria-label="Next month">
+                                            <i class="bi bi-chevron-right"></i>
+                                        </button>
+
+                                    </div>
+
+                                    <div class="admin-weekdays">
+                                        <span>Sun</span>
+                                        <span>Mon</span>
+                                        <span>Tue</span>
+                                        <span>Wed</span>
+                                        <span>Thu</span>
+                                        <span>Fri</span>
+                                        <span>Sat</span>
+                                    </div>
+
+                                    <div id="adminCalendarDays" class="admin-days"></div>
+
+                                    <div class="admin-help">
+                                        <i class="bi bi-info-circle me-1"></i>
+                                        Click a date to mark it as booked. Click it again to make it available.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-5">
+
+                                <label class="admin-form-label" for="adminDateInput">
+                                    Add a booked date
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="adminDateInput"
+                                    class="admin-date-input">
+
+                                <div class="admin-actions">
+
+                                    <button
+                                        type="button"
+                                        id="addBookedDate"
+                                        class="admin-btn">
+                                        <i class="bi bi-calendar-plus me-1"></i>
+                                        Add Date
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        id="clearBookedDates"
+                                        class="admin-btn secondary">
+                                        Clear All
+                                    </button>
+
+                                </div>
+
+                                <div id="adminStatus" class="admin-status"></div>
+
+                                <div class="booked-list">
+
+                                    <h3>
+                                        Booked Dates
+                                    </h3>
+
+                                    <div
+                                        id="bookedDateList"
+                                        class="booked-list-items">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="admin-actions">
+
+                            <button
+                                type="button"
+                                id="saveAndOpenBooking"
+                                class="admin-btn">
+                                <i class="bi bi-calendar-check me-1"></i>
+                                Save Dates & Open Booking Page
+                            </button>
+
+                            <button
+                                type="button"
+                                id="backToBooking"
+                                class="admin-btn secondary">
+                                <i class="bi bi-arrow-left me-1"></i>
+                                Back to Booking
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+
+        /* =====================================================
+           PERMANENT BOOKED-DATE STORAGE
+
+           Booked dates are stored in localStorage. They survive page
+           refreshes and closing/reopening the website until the admin
+           removes them from this Admin page.
+        ====================================================== */
+
+        const BOOKED_DATES_STORAGE_KEY = "ojiBookedDates";
+        const ADMIN_AUTH_KEY = "ojiAdminAuthenticated";
+
+
+        const ADMIN_PASSWORDS = [
+            "OJI@2026",
+            "Dream@123",
+            "Caravan#456",
+            "Admin@789",
+            "OJIAdmin@999"
+        ];
+
+        /* =====================================================
+           ADMIN PAGE AUTHENTICATION
+           Directly opening Admin.html also requires a password.
+        ====================================================== */
+
+        if (sessionStorage.getItem(ADMIN_AUTH_KEY) !== "true") {
+
+            const password = prompt("Enter Admin Password:");
+
+            if (
+                password === null ||
+                !ADMIN_PASSWORDS.includes(password.trim())
+            ) {
+
+                alert("Incorrect admin password.");
+                window.location.href = "Booking.html";
+
+            } else {
+
+                sessionStorage.setItem(ADMIN_AUTH_KEY, "true");
+
+            }
+
+        }
+
+
+        let adminCurrentDate = new Date();
+
+        let adminBookedDates = [];
+
+        /* Load previously saved booked dates from localStorage. */
+        try {
+
+            const storedBookedDates =
+                localStorage.getItem(BOOKED_DATES_STORAGE_KEY);
+
+            if (storedBookedDates) {
+
+                const parsedDates = JSON.parse(storedBookedDates);
+
+                if (Array.isArray(parsedDates)) {
+                    adminBookedDates = parsedDates
+                        .filter(function (date) {
+                            return /^\d{4}-\d{2}-\d{2}$/.test(date);
+                        })
+                        .sort();
+                }
+            }
+
+        } catch (error) {
+
+            console.warn("Unable to load saved booked dates.", error);
+
+        }
+
+
+        /* Save the current booked dates permanently. */
+        function saveBookedDates() {
+
+            localStorage.setItem(
+                BOOKED_DATES_STORAGE_KEY,
+                JSON.stringify(adminBookedDates)
+            );
+
+        }
+
+        const adminCalendarDays =
+            document.getElementById("adminCalendarDays");
+
+        const adminCalendarMonth =
+            document.getElementById("adminCalendarMonth");
+
+        const adminDateInput =
+            document.getElementById("adminDateInput");
+
+        const bookedDateList =
+            document.getElementById("bookedDateList");
+
+        const adminStatus =
+            document.getElementById("adminStatus");
+
+
+        function adminFormatDate(date) {
+
+            const year = date.getFullYear();
+
+            const month = String(date.getMonth() + 1).padStart(2, "0");
+
+            const day = String(date.getDate()).padStart(2, "0");
+
+            return `${year}-${month}-${day}`;
+        }
+
+
+        function adminDisplayDate(dateString) {
+
+            const date = new Date(dateString + "T00:00:00");
+
+            return date.toLocaleDateString("en-IN", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric"
+            });
+        }
+
+
+        function adminIsBooked(dateString) {
+            return adminBookedDates.includes(dateString);
+        }
+
+
+        function renderAdminCalendar() {
+
+            adminCalendarDays.innerHTML = "";
+
+            const year = adminCurrentDate.getFullYear();
+            const month = adminCurrentDate.getMonth();
+
+            adminCalendarMonth.textContent = new Date(
+                year,
+                month,
+                1
+            ).toLocaleDateString("en-IN", {
+                month: "long",
+                year: "numeric"
+            });
+
+            const firstDay = new Date(year, month, 1).getDay();
+
+            const totalDays = new Date(
+                year,
+                month + 1,
+                0
+            ).getDate();
+
+            for (let i = 0; i < firstDay; i++) {
+
+                const emptyDay = document.createElement("button");
+
+                emptyDay.type = "button";
+                emptyDay.className = "admin-day empty";
+
+                adminCalendarDays.appendChild(emptyDay);
+            }
+
+            for (let day = 1; day <= totalDays; day++) {
+
+                const date = new Date(year, month, day);
+                const dateString = adminFormatDate(date);
+
+                const dayElement = document.createElement("button");
+
+                dayElement.type = "button";
+                dayElement.className = "admin-day";
+                dayElement.textContent = day;
+
+                if (adminIsBooked(dateString)) {
+                    dayElement.classList.add("booked");
+                }
+
+                const today = new Date();
+
+                if (
+                    date.getFullYear() === today.getFullYear() &&
+                    date.getMonth() === today.getMonth() &&
+                    date.getDate() === today.getDate()
+                ) {
+                    dayElement.classList.add("today");
+                }
+
+                dayElement.addEventListener("click", function () {
+                    toggleBookedDate(dateString);
+                });
+
+                adminCalendarDays.appendChild(dayElement);
+            }
+
+            renderBookedDateList();
+        }
+
+
+        function toggleBookedDate(dateString) {
+
+            if (adminIsBooked(dateString)) {
+
+                adminBookedDates = adminBookedDates.filter(function (date) {
+                    return date !== dateString;
+                });
+
+                adminStatus.textContent =
+                    `${adminDisplayDate(dateString)} marked as available.`;
+
+            } else {
+
+                adminBookedDates.push(dateString);
+                adminBookedDates.sort();
+
+                adminStatus.textContent =
+                    `${adminDisplayDate(dateString)} marked as booked.`;
+            }
+
+            saveBookedDates();
+            renderAdminCalendar();
+        }
+
+
+        function renderBookedDateList() {
+
+            bookedDateList.innerHTML = "";
+
+            if (adminBookedDates.length === 0) {
+
+                bookedDateList.innerHTML =
+                    '<span class="empty-list">No booked dates selected.</span>';
+
+                return;
+            }
+
+            adminBookedDates.forEach(function (dateString) {
+
+                const chip = document.createElement("span");
+                chip.className = "booked-date-chip";
+
+                chip.innerHTML = `
+                    ${adminDisplayDate(dateString)}
+                    <button
+                        type="button"
+                        class="remove-date"
+                        title="Remove date"
+                        aria-label="Remove ${adminDisplayDate(dateString)}">
+                        <i class="bi bi-x-circle"></i>
+                    </button>
+                `;
+
+                chip.querySelector(".remove-date").addEventListener(
+                    "click",
+                    function () {
+                        toggleBookedDate(dateString);
+                    }
+                );
+
+                bookedDateList.appendChild(chip);
+            });
+        }
+
+
+        document
+            .getElementById("addBookedDate")
+            .addEventListener("click", function () {
+
+                const dateString = adminDateInput.value;
+
+                if (!dateString) {
+                    alert("Please select a date first.");
+                    return;
+                }
+
+                if (!adminIsBooked(dateString)) {
+                    adminBookedDates.push(dateString);
+                    adminBookedDates.sort();
+                    adminStatus.textContent =
+                        `${adminDisplayDate(dateString)} added as booked.`;
+                } else {
+                    adminStatus.textContent =
+                        `${adminDisplayDate(dateString)} is already booked.`;
+                }
+
+                saveBookedDates();
+                adminDateInput.value = "";
+                renderAdminCalendar();
+            });
+
+
+        document
+            .getElementById("clearBookedDates")
+            .addEventListener("click", function () {
+
+                if (adminBookedDates.length === 0) {
+                    adminStatus.textContent = "There are no booked dates to clear.";
+                    return;
+                }
+
+                if (!confirm("Clear all booked dates?")) {
+                    return;
+                }
+
+                adminBookedDates = [];
+                saveBookedDates();
+                adminStatus.textContent = "All booked dates cleared.";
+
+                renderAdminCalendar();
+            });
+
+
+        document
+            .getElementById("adminPreviousMonth")
+            .addEventListener("click", function () {
+
+                adminCurrentDate.setMonth(
+                    adminCurrentDate.getMonth() - 1
+                );
+
+                renderAdminCalendar();
+            });
+
+
+        document
+            .getElementById("adminNextMonth")
+            .addEventListener("click", function () {
+
+                adminCurrentDate.setMonth(
+                    adminCurrentDate.getMonth() + 1
+                );
+
+                renderAdminCalendar();
+            });
+
+
+        document
+            .getElementById("saveAndOpenBooking")
+            .addEventListener("click", function () {
+
+                saveBookedDates();
+
+                window.location.href = "Booking.html";
+            });
+
+
+        document
+            .getElementById("backToBooking")
+            .addEventListener("click", function () {
+
+                /* Keep the permanent booked dates when going back. */
+                saveBookedDates();
+
+                window.location.href = "Booking.html";
+            });
+
+
+        renderAdminCalendar();
+
+    </script>
+
+</body>
+
+</html>
