@@ -1,0 +1,3271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC PAGE SETTINGS
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Book Your Caravan | OJI Dreamliners</title>
+
+
+    <!-- =====================================================
+         BOOTSTRAP CSS
+         Navbar + responsive layout use Bootstrap
+    ====================================================== -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         BOOTSTRAP ICONS
+    ====================================================== -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         YOUR MAIN CSS FILE
+
+         IMPORTANT:
+         Navbar CSS is already inside style.css.
+         No navbar CSS is written in this page.
+    ====================================================== -->
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- =====================================================
+         BOOKING PAGE CSS ONLY
+
+         IMPORTANT:
+         DO NOT ADD NAVBAR CSS HERE.
+         Navbar CSS is handled by style.css.
+    ====================================================== -->
+
+    <style>
+
+        /* =====================================================
+           01. BOOKING PAGE GLOBAL SETTINGS
+        ====================================================== */
+
+        .oij-booking-page {
+            font-family: "DM Sans", sans-serif;
+            background: #f6f8fb;
+            color: #172033;
+            min-height: 100vh;
+        }
+
+
+        /* =====================================================
+           02. BOOKING HERO
+        ====================================================== */
+
+        .oij-booking-page .booking-hero {
+
+            min-height: 570px;
+
+            display: center;
+            align-items: center;
+
+            padding: 150px 0 80px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0a0a0a 0%,
+                    #080808 55%,
+                    #121212 100%
+                );
+
+            color: #ffffff;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .oij-booking-page .booking-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            right: -180px;
+            top: -220px;
+
+            border-radius: 50%;
+
+            background: rgba(255, 193, 7, 0.08);
+        }
+
+
+        .oij-booking-page .booking-hero-content {
+
+            position: relative;
+            z-index: 2;
+
+            max-width: 750px;
+        }
+
+
+        .oij-booking-page .booking-label {
+
+            display: inline-block;
+
+            font-size: 44px;
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+            color: #ffc107;
+
+            margin-bottom: 12px;
+        }
+
+
+        .oij-booking-page .booking-hero h1 {
+
+            font-size: 56px;
+            font-weight: 700;
+
+            line-height: 1.1;
+
+            margin: 0 0 18px;
+        }
+
+
+        .oij-booking-page .booking-hero p {
+
+            max-width: 680px;
+
+            font-size: 18px;
+            line-height: 1.7;
+
+            color: rgba(255,255,255,0.85);
+
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           03. BOOKING SECTION
+        ====================================================== */
+
+        .oij-booking-page .booking-section {
+
+            padding: 80px 0;
+        }
+
+
+        /* =====================================================
+           04. MAIN BOOKING CARD
+        ====================================================== */
+
+        .oij-booking-page .booking-card {
+
+            background: #ffffff;
+
+            border-radius: 20px;
+
+            padding: 38px;
+
+            box-shadow:
+                0 15px 45px rgba(7, 27, 69, 0.08);
+
+            border: 1px solid #e8edf4;
+        }
+
+
+        .oij-booking-page .booking-card-header {
+
+            margin-bottom: 30px;
+        }
+
+
+        .oij-booking-page .booking-card-header span,
+        .oij-booking-page .availability-header span {
+
+            display: block;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            color: #d99b00;
+
+            margin-bottom: 8px;
+        }
+
+
+        .oij-booking-page .booking-card-header h2,
+        .oij-booking-page .availability-header h2 {
+
+            font-size: 30px;
+            font-weight: 700;
+
+            color: #071b45;
+
+            margin-bottom: 10px;
+        }
+
+
+        .oij-booking-page .booking-card-header p,
+        .oij-booking-page .availability-header p {
+
+            color: #6c7585;
+
+            margin: 0;
+
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           05. FORM SECTION TITLES
+        ====================================================== */
+
+        .oij-booking-page .form-section-title {
+
+            display: flex;
+            align-items: center;
+
+            gap: 10px;
+
+            font-size: 17px;
+            font-weight: 700;
+
+            color: #071b45;
+
+            padding-bottom: 12px;
+
+            margin-bottom: 5px;
+
+            border-bottom: 1px solid #edf0f5;
+        }
+
+
+        .oij-booking-page .form-section-title i {
+
+            width: 34px;
+            height: 34px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: rgba(255, 193, 7, 0.15);
+
+            color: #d99b00;
+        }
+
+
+        /* =====================================================
+           06. FORM LABELS
+        ====================================================== */
+
+        .oij-booking-page label {
+
+            display: block;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            color: #263247;
+
+            margin-bottom: 7px;
+        }
+
+
+        /* =====================================================
+           07. INPUTS + SELECT + TEXTAREA
+        ====================================================== */
+
+        .oij-booking-page .form-control,
+        .oij-booking-page .form-select {
+
+            min-height: 52px;
+
+            border: 1px solid #dfe5ed;
+
+            border-radius: 10px;
+
+            padding: 12px 15px;
+
+            font-family: "DM Sans", sans-serif;
+
+            color: #172033;
+
+            background: #ffffff;
+
+            box-shadow: none;
+
+            transition: all 0.25s ease;
+        }
+
+
+        .oij-booking-page textarea.form-control {
+
+            min-height: 120px;
+
+            resize: vertical;
+        }
+
+
+        .oij-booking-page .form-control:focus,
+        .oij-booking-page .form-select:focus {
+
+            border-color: #ffc107;
+
+            box-shadow:
+                0 0 0 3px rgba(255, 193, 7, 0.12);
+        }
+
+
+        .oij-booking-page .form-control::placeholder {
+
+            color: #a3aab5;
+        }
+
+
+        /* =====================================================
+           08. WHATSAPP BUTTON
+        ====================================================== */
+
+        .oij-booking-page .whatsapp-book-btn {
+
+            width: 100%;
+
+            margin-top: 28px;
+
+            min-height: 56px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background: #071b45;
+
+            color: #ffffff;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 16px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 10px;
+
+            transition: all 0.3s ease;
+        }
+
+
+        .oij-booking-page .whatsapp-book-btn:hover {
+
+            background: #ffc107;
+
+            color: #071b45;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 25px rgba(7, 27, 69, 0.15);
+        }
+
+
+        .oij-booking-page .whatsapp-book-btn i {
+
+            font-size: 21px;
+        }
+
+
+        .oij-booking-page .booking-note {
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 7px;
+
+            margin: 14px 0 0;
+
+            font-size: 13px;
+
+            color: #8a93a2;
+        }
+
+
+        /* =====================================================
+           09. AVAILABILITY CARD
+        ====================================================== */
+
+        .oij-booking-page .availability-card {
+
+            background: #ffffff;
+
+            border-radius: 20px;
+
+            padding: 32px;
+
+            border: 1px solid #e8edf4;
+
+            box-shadow:
+                0 15px 45px rgba(7, 27, 69, 0.08);
+        }
+
+
+        .oij-booking-page .availability-header {
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =====================================================
+           ADMIN PAGE BUTTON
+        ====================================================== */
+
+        .oij-booking-page .booking-admin-btn {
+
+            margin-top: 16px;
+
+            border: 1px solid #ffc107;
+
+            border-radius: 9px;
+
+            padding: 9px 14px;
+
+            background: #071b45;
+
+            color: #ffffff;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: all 0.25s ease;
+        }
+
+
+        .oij-booking-page .booking-admin-btn:hover {
+
+            background: #ffc107;
+            color: #071b45;
+        }
+
+
+        /* =====================================================
+           10. CALENDAR
+        ====================================================== */
+
+        .oij-booking-page .calendar-container {
+
+            background: #f8fafc;
+
+            border-radius: 15px;
+
+            padding: 18px;
+        }
+
+
+        .oij-booking-page .calendar-top {
+
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            margin-bottom: 20px;
+        }
+
+
+        .oij-booking-page .calendar-top h3 {
+
+            margin: 0;
+
+            font-size: 18px;
+            font-weight: 700;
+
+            color: #071b45;
+
+            text-align: center;
+        }
+
+
+        .oij-booking-page .calendar-arrow {
+
+            width: 38px;
+            height: 38px;
+
+            border: 1px solid #dfe5ed;
+
+            border-radius: 8px;
+
+            background: #ffffff;
+
+            color: #071b45;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            cursor: pointer;
+
+            transition: all 0.25s ease;
+        }
+
+
+        .oij-booking-page .calendar-arrow:hover {
+
+            background: #ffc107;
+
+            border-color: #ffc107;
+
+            color: #071b45;
+        }
+
+
+        /* =====================================================
+           11. CALENDAR WEEKDAYS
+        ====================================================== */
+
+        .oij-booking-page .calendar-weekdays {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(7, 1fr);
+
+            gap: 5px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .oij-booking-page .calendar-weekdays span {
+
+            text-align: center;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            color: #8b94a3;
+
+            padding: 6px 0;
+        }
+
+
+        /* =====================================================
+           12. CALENDAR DAYS
+        ====================================================== */
+
+        .oij-booking-page .calendar-days {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(7, 1fr);
+
+            gap: 6px;
+        }
+
+
+        .oij-booking-page .calendar-day {
+
+            aspect-ratio: 1 / 1;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 8px;
+
+            /* AVAILABLE = GREEN */
+            background: #eaf8ef;
+
+            border: 1px solid #9ed6b2;
+
+            color: #1f7a45;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: all 0.2s ease;
+        }
+
+
+        .oij-booking-page .calendar-day:hover {
+
+            border-color: #2e9b5f;
+
+            background: #dff4e7;
+        }
+
+
+        .oij-booking-page .calendar-day.empty {
+
+            visibility: hidden;
+
+            cursor: default;
+        }
+
+
+        /* =====================================================
+           13. BOOKED DATE
+        ====================================================== */
+
+        .oij-booking-page .calendar-day.booked {
+
+            /* BOOKED = ORANGE */
+            background: #ff9f1c;
+
+            border-color: #f08c00;
+
+            color: #4a2700;
+
+            cursor: not-allowed;
+
+            text-decoration: line-through;
+        }
+
+
+        .oij-booking-page .calendar-day.booked:hover {
+
+            background: #ff9f1c;
+
+            border-color: #f08c00;
+        }
+
+
+        /* =====================================================
+           14. SELECTED DATE
+        ====================================================== */
+
+        .oij-booking-page .calendar-day.selected {
+
+            background: #ffc107;
+
+            border-color: #ffc107;
+
+            color: #071b45;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           15. TODAY
+        ====================================================== */
+
+        .oij-booking-page .calendar-day.today {
+
+            box-shadow:
+                inset 0 0 0 2px #071b45;
+        }
+
+
+        /* =====================================================
+           16. CALENDAR LEGEND
+        ====================================================== */
+
+        .oij-booking-page .calendar-legend {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            margin-top: 20px;
+
+            font-size: 12px;
+
+            color: #667085;
+        }
+
+
+        .oij-booking-page .calendar-legend > div {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 6px;
+        }
+
+
+        .oij-booking-page .legend-box {
+
+            width: 13px;
+            height: 13px;
+
+            display: inline-block;
+
+            border-radius: 3px;
+
+            border: 1px solid #dfe5ed;
+
+            background: #ffffff;
+        }
+
+
+        .oij-booking-page .legend-box.available {
+
+            background: #eaf8ef;
+
+            border-color: #9ed6b2;
+        }
+
+
+        .oij-booking-page .legend-box.selected {
+
+            background: #ffc107;
+
+            border-color: #ffc107;
+        }
+
+
+        .oij-booking-page .legend-box.booked {
+
+            background: #ff9f1c;
+
+            border-color: #f08c00;
+        }
+
+
+        /* =====================================================
+           17. AVAILABILITY MESSAGE
+        ====================================================== */
+
+        .oij-booking-page .availability-message {
+
+            margin-top: 20px;
+
+            padding: 15px;
+
+            border-radius: 10px;
+
+            background: #f4f7fb;
+
+            color: #526071;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        .oij-booking-page .availability-message i {
+
+            color: #d99b00;
+
+            margin-right: 5px;
+        }
+
+
+        .oij-booking-page .availability-message strong {
+
+            color: #071b45;
+        }
+
+
+        /* =====================================================
+           18. BOOKING INFO CARD
+        ====================================================== */
+
+        .oij-booking-page .booking-info-card {
+
+            background: #071b45;
+
+            border-radius: 20px;
+
+            padding: 25px 28px;
+
+            margin-top: 20px;
+
+            color: #ffffff;
+        }
+
+
+        .oij-booking-page .info-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 15px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+        }
+
+
+        .oij-booking-page .info-item:last-child {
+
+            border-bottom: none;
+
+            padding-bottom: 0;
+        }
+
+
+        .oij-booking-page .info-item:first-child {
+
+            padding-top: 0;
+        }
+
+
+        .oij-booking-page .info-icon {
+
+            flex-shrink: 0;
+
+            width: 43px;
+            height: 43px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background: rgba(255,193,7,0.15);
+
+            color: #ffc107;
+
+            font-size: 18px;
+        }
+
+
+        .oij-booking-page .info-item strong {
+
+            display: block;
+
+            font-size: 14px;
+
+            margin-bottom: 3px;
+        }
+
+
+        .oij-booking-page .info-item span {
+
+            display: block;
+
+            font-size: 12px;
+
+            color: rgba(255,255,255,0.65);
+
+            line-height: 1.5;
+        }
+
+
+        /* =====================================================
+           19. TABLET RESPONSIVE
+        ====================================================== */
+
+        @media (max-width: 991.98px) {
+
+            .oij-booking-page .booking-hero {
+
+                padding: 140px 0 70px;
+
+                min-height: 330px;
+            }
+
+
+            .oij-booking-page .booking-hero h1 {
+
+                font-size: 46px;
+            }
+
+
+            .oij-booking-page .booking-hero p {
+
+                font-size: 16px;
+            }
+
+
+            .oij-booking-page .booking-section {
+
+                padding: 60px 0;
+            }
+
+
+            .oij-booking-page .booking-card,
+            .oij-booking-page .availability-card {
+
+                padding: 30px;
+            }
+        }
+
+
+        /* =====================================================
+           20. MOBILE RESPONSIVE
+        ====================================================== */
+
+        @media (max-width: 767.98px) {
+
+            .oij-booking-page .booking-hero {
+
+                padding: 120px 0 55px;
+
+                min-height: 300px;
+            }
+
+
+            .oij-booking-page .booking-hero h1 {
+
+                font-size: 36px;
+
+                line-height: 1.15;
+            }
+
+
+            .oij-booking-page .booking-hero p {
+
+                font-size: 15px;
+
+                line-height: 1.6;
+            }
+
+
+            .oij-booking-page .booking-label {
+
+                font-size: 11px;
+
+                letter-spacing: 2px;
+            }
+
+
+            .oij-booking-page .booking-section {
+
+                padding: 40px 0;
+            }
+
+
+            .oij-booking-page .booking-card,
+            .oij-booking-page .availability-card {
+
+                padding: 22px;
+
+                border-radius: 16px;
+            }
+
+
+            .oij-booking-page .booking-card-header h2,
+            .oij-booking-page .availability-header h2 {
+
+                font-size: 25px;
+            }
+
+
+            .oij-booking-page .calendar-container {
+
+                padding: 12px;
+            }
+
+
+            .oij-booking-page .calendar-days {
+
+                gap: 4px;
+            }
+
+
+            .oij-booking-page .calendar-day {
+
+                font-size: 12px;
+
+                border-radius: 6px;
+            }
+
+
+            .oij-booking-page .calendar-weekdays {
+
+                gap: 4px;
+            }
+
+
+            .oij-booking-page .calendar-weekdays span {
+
+                font-size: 10px;
+            }
+
+
+            .oij-booking-page .calendar-legend {
+
+                gap: 10px;
+            }
+        }
+
+
+        /* =====================================================
+           21. SMALL MOBILE
+        ====================================================== */
+
+        @media (max-width: 480px) {
+
+            .oij-booking-page .booking-hero {
+
+                padding: 110px 0 45px;
+            }
+
+
+            .oij-booking-page .booking-hero h1 {
+
+                font-size: 31px;
+            }
+
+
+            .oij-booking-page .booking-card,
+            .oij-booking-page .availability-card {
+
+                padding: 18px;
+            }
+
+
+            .oij-booking-page .form-section-title {
+
+                font-size: 15px;
+            }
+
+
+            .oij-booking-page .form-control,
+            .oij-booking-page .form-select {
+
+                min-height: 49px;
+
+                font-size: 14px;
+            }
+
+
+            .oij-booking-page .calendar-top h3 {
+
+                font-size: 16px;
+            }
+
+
+            .oij-booking-page .calendar-arrow {
+
+                width: 34px;
+                height: 34px;
+            }
+
+
+            .oij-booking-page .calendar-day {
+
+                font-size: 11px;
+            }
+
+
+            .oij-booking-page .booking-info-card {
+
+                padding: 20px;
+            }
+        }
+
+        /* =========================================================
+   BOOKING PAGE ONLY
+   FIX NAVBAR LOGO SIZE
+   Does NOT affect other pages
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    body .oji-navbar .oji-logo {
+        width: 55px;
+        height: 55px;
+        object-fit: contain;
+    }
+
+}
+
+
+@media (max-width: 767.98px) {
+
+    body .oji-navbar .oji-logo {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    body .oji-navbar .oji-logo {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+    }
+
+}
+
+
+/* =========================================================
+   BOOKING PAGE FONT
+   Uses the same font as the Home page
+========================================================= */
+
+.oij-booking-page {
+      font-family: 'Cormorant Garamond', serif;
+}
+
+
+/* Make all booking page elements inherit the same font */
+
+.oij-booking-page h1,
+.oij-booking-page h2,
+.oij-booking-page h3,
+.oij-booking-page h4,
+.oij-booking-page h5,
+.oij-booking-page h6,
+.oij-booking-page p,
+.oij-booking-page span,
+.oij-booking-page label,
+.oij-booking-page input,
+.oij-booking-page select,
+.oij-booking-page textarea,
+.oij-booking-page button {
+      font-family: 'Cormorant Garamond', serif;
+}
+
+
+/* =========================================================
+   BOOKING HERO TEXT - CENTER
+========================================================= */
+
+.oij-booking-page .booking-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* Center the content */
+
+.oij-booking-page .booking-hero-content {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+
+/* Center paragraph */
+
+.oij-booking-page .booking-hero p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .oij-booking-page .booking-hero-content {
+        max-width: 100%;
+    }
+
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+
+         IMPORTANT:
+         DO NOT CHANGE THIS NAVBAR.
+
+         Navbar CSS:
+         style.css
+
+         Navbar JS:
+         script.js
+
+         Bootstrap handles responsive collapse.
+    ====================================================== -->
+
+    <nav class="navbar navbar-expand-lg fixed-top oji-navbar"
+         id="mainNavbar">
+
+        <div class="container-fluid px-3 px-lg-5">
+
+
+            <!-- =================================================
+                 LOGO + BRAND
+            ================================================== -->
+
+            <a class="navbar-brand oji-brand"
+               href="index.html">
+
+                <img src="/oji_dreamlinears_logo.jpeg"
+                     alt="OJI Caravan Logo"
+                     class="oji-logo">
+
+
+                <div class="brand-text">
+
+                    <span class="brand-title">
+                        DREAMLINERS
+                    </span>
+
+                    <span class="brand-subtitle">
+                        CARAVAN
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- =================================================
+                 MOBILE HAMBURGER
+            ================================================== -->
+
+            <button
+                class="navbar-toggler oji-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavigation"
+                aria-controls="mainNavigation"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- =================================================
+                 NAVIGATION LINKS
+            ================================================== -->
+
+            <div class="collapse navbar-collapse"
+                 id="mainNavigation">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+
+
+                    <!-- HOME -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link oji-nav-link"
+                           href="index.html">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- ABOUT -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link oji-nav-link"
+                           href="about.html">
+
+                            About
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- GALLERY -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link oji-nav-link"
+                           href="Gallery.html">
+
+                            Gallery
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- BOOK NOW -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link oji-nav-link active"
+                           href="Booking.html">
+
+                            Book Now
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- BOOK BUTTON -->
+
+                    <li class="nav-item mt-3 mt-lg-0">
+
+                        <a href="Booking.html"
+                           class="btn oji-nav-button">
+
+                            <i class="bi bi-calendar-check me-2"></i>
+
+                            Book Your Trip
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         BOOKING PAGE
+    ====================================================== -->
+
+    <div class="oij-booking-page">
+
+
+        <!-- =================================================
+             HERO SECTION
+        ================================================== -->
+
+        <section class="booking-hero">
+
+            <div class="container">
+
+                <div class="booking-hero-content">
+
+                    <span class="booking-label">
+                        OJI DREAMLINERS
+                    </span>
+
+                    <h1>
+                        1 Day plan Starts at 25k
+                    </h1>
+
+                    <p>
+                        Turn your travel plans into an unforgettable experience. Choose your 
+                        preferred dates, check caravan availability, and send your booking 
+                        request to our team.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             BOOKING SECTION
+        ================================================== -->
+
+        <section class="booking-section">
+
+            <div class="container">
+
+                <div class="row g-4">
+
+
+                    <!-- =================================================
+                         LEFT SIDE - BOOKING FORM
+                    ================================================== -->
+
+                    <div class="col-lg-7">
+
+                        <div class="booking-card">
+
+
+                            <!-- HEADER -->
+
+                            <div class="booking-card-header">
+
+                                <span>
+                                    BOOK YOUR JOURNEY
+                                </span>
+
+                                <h2>
+                                    Tell Us About Your Trip
+                                </h2>
+
+                                <p>
+                                    Fill in your travel details and we'll help
+                                    you plan your caravan journey.
+                                </p>
+
+                            </div>
+
+
+
+                            <!-- FORM -->
+
+                            <form id="bookingForm">
+
+
+                                <!-- =====================================
+                                     CUSTOMER DETAILS
+                                ====================================== -->
+
+                                <div class="form-section-title">
+
+                                    <i class="bi bi-person"></i>
+
+                                    Your Details
+
+                                </div>
+
+
+                                <div class="row g-3">
+
+
+                                    <!-- NAME -->
+
+                                    <div class="col-md-6">
+
+                                        <label for="customerName">
+                                            Full Name
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="customerName"
+                                            class="form-control"
+                                            placeholder="Enter your name"
+                                            required>
+
+                                    </div>
+
+
+                                    <!-- PHONE -->
+
+                                    <div class="col-md-6">
+
+                                        <label for="phone">
+                                            WhatsApp Number
+                                        </label>
+
+                                        <input
+                                            type="tel"
+                                            id="phone"
+                                            class="form-control"
+                                            placeholder="+91 XXXXX XXXXX"
+                                            required>
+
+                                    </div>
+
+
+                                    <!-- EMAIL -->
+
+                                    <div class="col-12">
+
+                                        <label for="email">
+                                            Email Address
+                                        </label>
+
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            class="form-control"
+                                            placeholder="Enter your email">
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- =====================================
+                                     JOURNEY DETAILS
+                                ====================================== -->
+
+                                <div class="form-section-title mt-4">
+
+                                    <i class="bi bi-map"></i>
+
+                                    Journey Details
+
+                                </div>
+
+
+                                <div class="row g-3">
+
+
+                                    <!-- PICKUP -->
+
+                                    <div class="col-md-6">
+
+                                        <label for="pickup">
+                                            Pickup Location
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="pickup"
+                                            class="form-control"
+                                            placeholder="e.g. Hyderabad"
+                                            required>
+
+                                    </div>
+
+
+                                    <!-- DESTINATION -->
+
+                                    <div class="col-md-6">
+
+                                        <label for="destination">
+                                            Destination
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="destination"
+                                            class="form-control"
+                                            placeholder="e.g. Goa"
+                                            required>
+
+                                    </div>
+
+
+                                    <!-- TRAVELLERS -->
+
+                                    <div class="col-md-6">
+
+                                        <label for="travellers">
+                                            Number of Travellers
+                                        </label>
+
+                                        <select
+                                            id="travellers"
+                                            class="form-select"
+                                            required>
+
+                                            <option value="">
+                                                Select travellers
+                                            </option>
+
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <!-- CARAVAN -->
+
+                                    <div class="col-md-6">
+
+                                        <label for="caravan">
+                                            Select Caravan
+                                        </label>
+
+                                        <select
+                                            id="caravan"
+                                            class="form-select"
+                                            required>
+
+                                            <option value="">
+                                                Select Caravan
+                                            </option>
+
+                                            <option>
+                                                OJI Dreamliners Caravan
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- =====================================
+                                     TRAVEL DATES
+                                ====================================== -->
+
+                                <div class="form-section-title mt-4">
+
+                                    <i class="bi bi-calendar-event"></i>
+
+                                    Travel Dates
+
+                                </div>
+
+
+                                <div class="row g-3">
+
+
+                                    <!-- START DATE -->
+
+                                    <div class="col-md-6">
+
+                                        <label for="startDate">
+                                            Journey Start
+                                        </label>
+
+                                        <input
+                                            type="date"
+                                            id="startDate"
+                                            class="form-control"
+                                            required>
+
+                                    </div>
+
+
+                                    <!-- END DATE -->
+
+                                    <div class="col-md-6">
+
+                                        <label for="endDate">
+                                            Journey Return
+                                        </label>
+
+                                        <input
+                                            type="date"
+                                            id="endDate"
+                                            class="form-control"
+                                            required>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- =====================================
+                                     ADDITIONAL MESSAGE
+                                ====================================== -->
+
+                                <div class="mt-3">
+
+                                    <label for="message">
+                                        Additional Requirements
+                                    </label>
+
+                                    <textarea
+                                        id="message"
+                                        class="form-control"
+                                        rows="4"
+                                        placeholder="Tell us about your trip or any special requirements..."></textarea>
+
+                                </div>
+
+
+
+                                <!-- =====================================
+                                     WHATSAPP BUTTON
+                                ====================================== -->
+
+                                <button
+                                    type="submit"
+                                    class="whatsapp-book-btn">
+
+                                    <i class="bi bi-whatsapp"></i>
+
+                                    Send Booking Request on WhatsApp
+
+                                </button>
+
+
+                                <p class="booking-note">
+
+                                    <i class="bi bi-info-circle"></i>
+
+                                    Your booking details will open directly
+                                    in WhatsApp.
+
+                                </p>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         RIGHT SIDE - AVAILABILITY
+                    ================================================== -->
+
+                    <div class="col-lg-5">
+
+
+                        <!-- =============================================
+                             AVAILABILITY CARD
+                        ============================================== -->
+
+                        <div class="availability-card">
+
+
+                            <!-- HEADER -->
+
+                            <div class="availability-header">
+
+                                <span>
+                                    CHECK AVAILABILITY
+                                </span>
+
+                                <h2>
+                                    Choose Your Dates
+                                </h2>
+
+                                <p>
+                                    Select your travel dates from the
+                                    calendar below.
+                                </p>
+
+                                <!-- ADMIN PAGE BUTTON -->
+                                <button
+                                    type="button"
+                                    id="openAdminPage"
+                                    class="booking-admin-btn">
+
+                                    <i class="bi bi-shield-lock me-2"></i>
+                                    Admin Page
+
+                                </button>
+
+                            </div>
+
+
+
+                            <!-- =========================================
+                                 CALENDAR
+                            ========================================== -->
+
+                            <div class="calendar-container">
+
+
+                                <!-- CALENDAR HEADER -->
+
+                                <div class="calendar-top">
+
+
+                                    <button
+                                        type="button"
+                                        id="previousMonth"
+                                        class="calendar-arrow">
+
+                                        <i class="bi bi-chevron-left"></i>
+
+                                    </button>
+
+
+                                    <h3 id="calendarMonth">
+                                        September 2026
+                                    </h3>
+
+
+                                    <button
+                                        type="button"
+                                        id="nextMonth"
+                                        class="calendar-arrow">
+
+                                        <i class="bi bi-chevron-right"></i>
+
+                                    </button>
+
+                                </div>
+
+
+
+                                <!-- WEEK DAYS -->
+
+                                <div class="calendar-weekdays">
+
+                                    <span>Sun</span>
+                                    <span>Mon</span>
+                                    <span>Tue</span>
+                                    <span>Wed</span>
+                                    <span>Thu</span>
+                                    <span>Fri</span>
+                                    <span>Sat</span>
+
+                                </div>
+
+
+
+                                <!-- CALENDAR DAYS -->
+
+                                <div
+                                    id="calendarDays"
+                                    class="calendar-days">
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- =========================================
+                                 CALENDAR LEGEND
+                            ========================================== -->
+
+                            <div class="calendar-legend">
+
+
+                                <div>
+
+                                    <span
+                                        class="legend-box available">
+                                    </span>
+
+                                    Available
+
+                                </div>
+
+
+                                <div>
+
+                                    <span
+                                        class="legend-box selected">
+                                    </span>
+
+                                    Selected
+
+                                </div>
+
+
+                                <div>
+
+                                    <span
+                                        class="legend-box booked">
+                                    </span>
+
+                                    Booked
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- =========================================
+                                 AVAILABILITY MESSAGE
+                            ========================================== -->
+
+                            <div
+                                id="availabilityMessage"
+                                class="availability-message">
+
+                                <i class="bi bi-calendar-check"></i>
+
+                                Select your travel dates to continue.
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =============================================
+                             BOOKING INFORMATION
+                        ============================================== -->
+
+                        <div class="booking-info-card">
+
+
+                            <!-- INFO 01 -->
+
+                            <div class="info-item">
+
+                                <div class="info-icon">
+
+                                    <i class="bi bi-clock"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Flexible Travel
+                                    </strong>
+
+                                    <span>
+                                        Plan your journey around your schedule.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- INFO 02 -->
+
+                            <div class="info-item">
+
+                                <div class="info-icon">
+
+                                    <i class="bi bi-whatsapp"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        WhatsApp Booking
+                                    </strong>
+
+                                    <span>
+                                        Send your trip details directly
+                                        to our team.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- INFO 03 -->
+
+                            <div class="info-item">
+
+                                <div class="info-icon">
+
+                                    <i class="bi bi-shield-check"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Booking Assistance
+                                    </strong>
+
+                                    <span>
+                                        Our team will confirm your request.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="portfolio-footer">
+
+    <div class="container">
+
+        <!-- SOCIAL ICONS -->
+        <div class="footer-social">
+
+                        
+                <a href="tel:+919490525009" aria-label="Phone">
+                    <i class="bi bi-telephone-fill"></i>
+                </a>
+
+                <a href="https://www.instagram.com/ojicaravans?stkn=djBxMjBvN2J6enly&utm_source=qr" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="https://wa.me/919490525009" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="WhatsApp">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+
+
+                <a href="https://maps.app.goo.gl/HWHen4e3oEpEvwqDA?g_st=aw" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Location">
+                    <i class="bi bi-geo-alt"></i>
+                </a>
+
+
+        </div>
+
+
+        <!-- LOCATION -->
+        <p class="footer-location">
+            We're based in
+            <span>Gunrock Enclave,Kharkhana Road, Secunderabad, Telangana</span>
+        </p>
+
+
+        <!-- DESCRIPTION -->
+        <p class="footer-description">
+            Luxury on wheels that turns travel into memories.
+        </p>
+
+
+        <!-- EMAIL -->
+        <p class="footer-contact">
+            <strong>Email:</strong>
+            <a href="mailto:info@tinkerlabs.com">
+                oji.vinayak@gmail.com
+            </a>
+        </p>
+
+
+        <!-- PHONE -->
+        <p class="footer-contact">
+            <strong>Phone:</strong>
+            <a href="tel:+919640502200">
+                +91 9490525009 
+            </a>
+        </p>
+
+
+        <!-- COPYRIGHT -->
+        <p class="footer-copyright">
+            © This website is built under
+            <a href="https://tinkerlabs.co.in/" target="_blank">
+                tinkerlabs.co.in
+            </a>
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+    <!-- =====================================================
+         BOOKING PAGE JAVASCRIPT ONLY
+
+         IMPORTANT:
+         This script contains ONLY booking functionality.
+
+         Navbar JavaScript is NOT written here.
+         Navbar JavaScript remains in script.js.
+    ====================================================== -->
+
+    <script>
+
+
+        /* =====================================================
+           01. WHATSAPP NUMBER
+
+           CHANGE THIS NUMBER
+
+           Example:
+           const WHATSAPP_NUMBER = "919876543210";
+        ====================================================== */
+
+        const WHATSAPP_NUMBER = "917842678448";
+
+
+
+        /* =====================================================
+           02. BOOKED DATES
+
+           Add dates here which are already booked.
+
+           Format:
+           YYYY-MM-DD
+        ====================================================== */
+
+        /*
+           ADMIN BOOKED DATES
+
+           Admin.html stores booked dates permanently in localStorage.
+           The same dates are read here every time the page loads, so
+           they remain after refresh and after closing/reopening the site.
+        */
+        const BOOKED_DATES_STORAGE_KEY = "ojiBookedDates";
+
+        let bookedDates = [];
+
+        try {
+
+            const storedBookedDates =
+                localStorage.getItem(BOOKED_DATES_STORAGE_KEY);
+
+            if (storedBookedDates) {
+
+                const parsedDates =
+                    JSON.parse(storedBookedDates);
+
+                if (Array.isArray(parsedDates)) {
+                    bookedDates = parsedDates;
+                }
+
+            }
+
+        } catch (error) {
+
+            console.warn("Unable to read booked dates.", error);
+
+        }
+
+
+
+        /* =====================================================
+           03. CALENDAR VARIABLES
+        ====================================================== */
+
+        let currentDate = new Date();
+
+        let selectedDates = [];
+
+
+
+        /* =====================================================
+           04. GET HTML ELEMENTS
+        ====================================================== */
+
+        const calendarDays =
+            document.getElementById("calendarDays");
+
+        const calendarMonth =
+            document.getElementById("calendarMonth");
+
+        const previousMonth =
+            document.getElementById("previousMonth");
+
+        const nextMonth =
+            document.getElementById("nextMonth");
+
+        const availabilityMessage =
+            document.getElementById("availabilityMessage");
+
+
+
+        /* =====================================================
+           05. FORMAT DATE
+
+           Converts date into:
+
+           YYYY-MM-DD
+        ====================================================== */
+
+        function formatDate(date) {
+
+            const year =
+                date.getFullYear();
+
+            const month =
+                String(date.getMonth() + 1)
+                    .padStart(2, "0");
+
+            const day =
+                String(date.getDate())
+                    .padStart(2, "0");
+
+            return `${year}-${month}-${day}`;
+        }
+
+
+
+        /* =====================================================
+           06. DISPLAY DATE
+
+           Converts:
+
+           2026-10-03
+
+           into:
+
+           03 Oct 2026
+        ====================================================== */
+
+        function displayDate(dateString) {
+
+            const date =
+                new Date(
+                    dateString + "T00:00:00"
+                );
+
+            return date.toLocaleDateString(
+                "en-IN",
+                {
+                    day: "2-digit",
+                    month: "short",
+                    year: "numeric"
+                }
+            );
+        }
+
+
+
+        /* =====================================================
+           07. CHECK WHETHER DATE IS BOOKED
+        ====================================================== */
+
+        function isBooked(dateString) {
+
+            return bookedDates.includes(
+                dateString
+            );
+        }
+
+
+
+        /* =====================================================
+           CHECK WHETHER A DATE RANGE CONTAINS A BOOKED DATE
+        ====================================================== */
+
+        function rangeContainsBookedDate(startDateString, endDateString) {
+
+            let start =
+                new Date(startDateString + "T00:00:00");
+
+            let end =
+                new Date(endDateString + "T00:00:00");
+
+            /* Always check the complete range in either selection order. */
+            if (start > end) {
+
+                const temporaryDate = start;
+                start = end;
+                end = temporaryDate;
+            }
+
+            const cursor = new Date(start);
+
+            while (cursor <= end) {
+
+                if (isBooked(formatDate(cursor))) {
+                    return true;
+                }
+
+                cursor.setDate(cursor.getDate() + 1);
+            }
+
+            return false;
+        }
+
+
+
+        /* =====================================================
+           08. RENDER CALENDAR
+        ====================================================== */
+
+        function renderCalendar() {
+
+            calendarDays.innerHTML = "";
+
+
+            const year =
+                currentDate.getFullYear();
+
+            const month =
+                currentDate.getMonth();
+
+
+
+            /* ===============================================
+               MONTH + YEAR TITLE
+            =============================================== */
+
+            calendarMonth.textContent =
+                new Date(
+                    year,
+                    month,
+                    1
+                ).toLocaleDateString(
+                    "en-IN",
+                    {
+                        month: "long",
+                        year: "numeric"
+                    }
+                );
+
+
+
+            /* ===============================================
+               FIRST DAY OF MONTH
+            =============================================== */
+
+            const firstDay =
+                new Date(
+                    year,
+                    month,
+                    1
+                ).getDay();
+
+
+
+            /* ===============================================
+               TOTAL DAYS
+            =============================================== */
+
+            const totalDays =
+                new Date(
+                    year,
+                    month + 1,
+                    0
+                ).getDate();
+
+
+
+            /* ===============================================
+               EMPTY DAYS BEFORE FIRST DAY
+            =============================================== */
+
+            for (
+                let i = 0;
+                i < firstDay;
+                i++
+            ) {
+
+                const emptyDay =
+                    document.createElement("div");
+
+                emptyDay.classList.add(
+                    "calendar-day",
+                    "empty"
+                );
+
+                calendarDays.appendChild(
+                    emptyDay
+                );
+            }
+
+
+
+            /* ===============================================
+               CREATE ACTUAL DAYS
+            =============================================== */
+
+            for (
+                let day = 1;
+                day <= totalDays;
+                day++
+            ) {
+
+                const date =
+                    new Date(
+                        year,
+                        month,
+                        day
+                    );
+
+                const dateString =
+                    formatDate(date);
+
+
+                const dayElement =
+                    document.createElement("div");
+
+
+                dayElement.classList.add(
+                    "calendar-day"
+                );
+
+
+                dayElement.textContent =
+                    day;
+
+
+
+                /* ===========================================
+                   BOOKED DATE
+                ============================================ */
+
+                if (
+                    isBooked(dateString)
+                ) {
+
+                    dayElement.classList.add(
+                        "booked"
+                    );
+                }
+
+
+
+                /* ===========================================
+                   TODAY
+                ============================================ */
+
+                const today =
+                    new Date();
+
+
+                if (
+
+                    date.getFullYear() ===
+                    today.getFullYear()
+
+                    &&
+
+                    date.getMonth() ===
+                    today.getMonth()
+
+                    &&
+
+                    date.getDate() ===
+                    today.getDate()
+
+                ) {
+
+                    dayElement.classList.add(
+                        "today"
+                    );
+                }
+
+
+
+                /* ===========================================
+                   SELECTED DATE
+                ============================================ */
+
+                if (
+                    selectedDates.includes(
+                        dateString
+                    )
+                ) {
+
+                    dayElement.classList.add(
+                        "selected"
+                    );
+                }
+
+
+
+                /* ===========================================
+                   CLICK ONLY AVAILABLE DATES
+                ============================================ */
+
+                if (
+                    !isBooked(dateString)
+                ) {
+
+                    dayElement.addEventListener(
+                        "click",
+                        function () {
+
+                            selectDate(
+                                dateString
+                            );
+
+                        }
+                    );
+
+                }
+
+
+                calendarDays.appendChild(
+                    dayElement
+                );
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           09. SELECT DATE
+        ====================================================== */
+
+        function selectDate(dateString) {
+
+
+            /* ===============================================
+               REMOVE DATE IF ALREADY SELECTED
+            =============================================== */
+
+            if (
+                selectedDates.includes(
+                    dateString
+                )
+            ) {
+
+                selectedDates =
+                    selectedDates.filter(
+                        function(date) {
+
+                            return date !==
+                                dateString;
+
+                        }
+                    );
+
+            }
+
+
+            /* ===============================================
+               ADD NEW DATE
+            =============================================== */
+
+            else {
+
+                if (
+                    selectedDates.length >= 2
+                ) {
+
+                    selectedDates = [];
+
+                }
+
+                if (
+                    selectedDates.length === 1 &&
+                    rangeContainsBookedDate(
+                        selectedDates[0],
+                        dateString
+                    )
+                ) {
+
+                    alert(
+                        "Your selected date range contains a booked date. Please choose another date."
+                    );
+
+                    return;
+                }
+
+                selectedDates.push(
+                    dateString
+                );
+
+            }
+
+
+            /* ===============================================
+               SORT DATES
+            =============================================== */
+
+            selectedDates.sort();
+
+
+            renderCalendar();
+
+            updateAvailabilityMessage();
+
+            updateFormDates();
+
+        }
+
+
+
+        /* =====================================================
+           10. UPDATE AVAILABILITY MESSAGE
+        ====================================================== */
+
+        function updateAvailabilityMessage() {
+
+
+            /* ===============================================
+               NO DATE
+            =============================================== */
+
+            if (
+                selectedDates.length === 0
+            ) {
+
+                availabilityMessage.innerHTML = `
+
+                    <i class="bi bi-calendar-check"></i>
+
+                    Select your travel dates to continue.
+
+                `;
+
+                return;
+            }
+
+
+
+            /* ===============================================
+               ONLY START DATE
+            =============================================== */
+
+            if (
+                selectedDates.length === 1
+            ) {
+
+                availabilityMessage.innerHTML = `
+
+                    <i class="bi bi-check-circle"></i>
+
+                    Start date:
+
+                    <strong>
+                        ${displayDate(selectedDates[0])}
+                    </strong>
+
+                    <br>
+
+                    Now select your return date.
+
+                `;
+
+                return;
+            }
+
+
+
+            /* ===============================================
+               START + END DATE
+            =============================================== */
+
+            const start =
+                new Date(
+                    selectedDates[0] +
+                    "T00:00:00"
+                );
+
+
+            const end =
+                new Date(
+                    selectedDates[1] +
+                    "T00:00:00"
+                );
+
+
+            const difference =
+                end - start;
+
+
+            const days =
+                Math.ceil(
+                    difference /
+                    (1000 * 60 * 60 * 24)
+                );
+
+
+
+            /* ===============================================
+               INVALID DATE
+            =============================================== */
+
+            if (
+                days <= 0
+            ) {
+
+                availabilityMessage.innerHTML = `
+
+                    <i class="bi bi-exclamation-circle"></i>
+
+                    Please select a valid return date.
+
+                `;
+
+                return;
+            }
+
+
+
+            /* ===============================================
+               VALID DATE RANGE
+            =============================================== */
+
+            availabilityMessage.innerHTML = `
+
+                <i class="bi bi-check-circle"></i>
+
+                Dates selected:
+
+                <strong>
+                    ${displayDate(selectedDates[0])}
+                </strong>
+
+                to
+
+                <strong>
+                    ${displayDate(selectedDates[1])}
+                </strong>
+
+                <br>
+
+                Trip Duration:
+
+                <strong>
+                    ${days} day(s)
+                </strong>
+
+            `;
+
+        }
+
+
+
+        /* =====================================================
+           11. UPDATE FORM DATE INPUTS
+        ====================================================== */
+
+        function updateFormDates() {
+
+            const startDate =
+                document.getElementById(
+                    "startDate"
+                );
+
+
+            const endDate =
+                document.getElementById(
+                    "endDate"
+                );
+
+
+            if (
+                selectedDates.length >= 1
+            ) {
+
+                startDate.value =
+                    selectedDates[0];
+
+            }
+
+
+            if (
+                selectedDates.length >= 2
+            ) {
+
+                endDate.value =
+                    selectedDates[1];
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           12. ADMIN PAGE AUTHENTICATION
+        ====================================================== */
+
+        const ADMIN_PASSWORDS = [
+            "OJI@2026",
+            "Dream@123",
+            "Caravan#456",
+            "Admin@789",
+            "OJIAdmin@999"
+        ];
+
+
+        const openAdminPage =
+            document.getElementById("openAdminPage");
+
+
+        openAdminPage.addEventListener(
+            "click",
+            function() {
+
+                const password =
+                    prompt("Enter Admin Password:");
+
+                if (password === null) {
+                    return;
+                }
+
+                if (ADMIN_PASSWORDS.includes(password.trim())) {
+
+                    window.location.href = "Admin.html";
+
+                } else {
+
+                    alert("Incorrect admin password.");
+
+                }
+
+            }
+        );
+
+
+
+        /* =====================================================
+           13. PREVIOUS MONTH
+        ====================================================== */
+
+        previousMonth.addEventListener(
+            "click",
+            function() {
+
+                currentDate.setMonth(
+                    currentDate.getMonth() - 1
+                );
+
+                renderCalendar();
+
+            }
+        );
+
+
+
+        /* =====================================================
+           14. NEXT MONTH
+        ====================================================== */
+
+        nextMonth.addEventListener(
+            "click",
+            function() {
+
+                currentDate.setMonth(
+                    currentDate.getMonth() + 1
+                );
+
+                renderCalendar();
+
+            }
+        );
+
+
+
+        /* =====================================================
+           15. START DATE MANUAL SELECTION
+        ====================================================== */
+
+        document
+            .getElementById("startDate")
+            .addEventListener(
+                "change",
+                function() {
+
+
+                    if (
+                        isBooked(this.value)
+                    ) {
+
+                        alert(
+                            "This date is already booked. Please select another date."
+                        );
+
+                        this.value = "";
+
+                        return;
+                    }
+
+
+                    selectedDates = [this.value];
+
+                    document.getElementById("endDate").value = "";
+
+                    renderCalendar();
+
+                    updateAvailabilityMessage();
+
+                    updateFormDates();
+
+                }
+            );
+
+
+
+        /* =====================================================
+           16. END DATE MANUAL SELECTION
+        ====================================================== */
+
+        document
+            .getElementById("endDate")
+            .addEventListener(
+                "change",
+                function() {
+
+
+                    if (
+                        isBooked(this.value)
+                    ) {
+
+                        alert(
+                            "This date is already booked. Please select another date."
+                        );
+
+                        this.value = "";
+
+                        return;
+                    }
+
+                    const startValue =
+                        document.getElementById("startDate").value;
+
+                    if (
+                        startValue &&
+                        rangeContainsBookedDate(startValue, this.value)
+                    ) {
+
+                        alert(
+                            "Your selected date range contains a booked date. Please choose different dates."
+                        );
+
+                        this.value = "";
+
+                        return;
+                    }
+
+                    selectedDates[1] =
+                        this.value;
+
+                    selectedDates.sort();
+
+                    renderCalendar();
+
+                    updateAvailabilityMessage();
+
+                    updateFormDates();
+
+                }
+            );
+
+
+
+        /* =====================================================
+           17. BOOKING FORM SUBMIT
+        ====================================================== */
+
+        document
+            .getElementById("bookingForm")
+            .addEventListener(
+                "submit",
+                function(event) {
+
+                    event.preventDefault();
+
+
+
+                    /* =========================================
+                       GET FORM VALUES
+                    ========================================== */
+
+                    const name =
+                        document
+                            .getElementById(
+                                "customerName"
+                            )
+                            .value
+                            .trim();
+
+
+                    const phone =
+                        document
+                            .getElementById(
+                                "phone"
+                            )
+                            .value
+                            .trim();
+
+
+                    const email =
+                        document
+                            .getElementById(
+                                "email"
+                            )
+                            .value
+                            .trim();
+
+
+                    const pickup =
+                        document
+                            .getElementById(
+                                "pickup"
+                            )
+                            .value
+                            .trim();
+
+
+                    const destination =
+                        document
+                            .getElementById(
+                                "destination"
+                            )
+                            .value
+                            .trim();
+
+
+                    const travellers =
+                        document
+                            .getElementById(
+                                "travellers"
+                            )
+                            .value;
+
+
+                    const caravan =
+                        document
+                            .getElementById(
+                                "caravan"
+                            )
+                            .value;
+
+
+                    const startDate =
+                        document
+                            .getElementById(
+                                "startDate"
+                            )
+                            .value;
+
+
+                    const endDate =
+                        document
+                            .getElementById(
+                                "endDate"
+                            )
+                            .value;
+
+
+                    const message =
+                        document
+                            .getElementById(
+                                "message"
+                            )
+                            .value
+                            .trim();
+
+
+
+                    /* =========================================
+                       CHECK DATES
+                    ========================================== */
+
+                    if (
+                        !startDate ||
+                        !endDate
+                    ) {
+
+                        alert(
+                            "Please select your journey start and return dates."
+                        );
+
+                        return;
+                    }
+
+
+
+                    /* =========================================
+                       CHECK BOOKED DATES
+                    ========================================== */
+
+                    if (
+
+                        isBooked(startDate)
+
+                        ||
+
+                        isBooked(endDate)
+
+                    ) {
+
+                        alert(
+                            "One of your selected dates is already booked. Please choose different dates."
+                        );
+
+                        return;
+                    }
+
+
+
+                    /* =========================================
+                       CHECK DATE ORDER
+                    ========================================== */
+
+                    const start =
+                        new Date(
+                            startDate +
+                            "T00:00:00"
+                        );
+
+
+                    const end =
+                        new Date(
+                            endDate +
+                            "T00:00:00"
+                        );
+
+
+                    if (
+                        end <= start
+                    ) {
+
+                        alert(
+                            "Return date must be after the journey start date."
+                        );
+
+                        return;
+                    }
+
+
+
+                    /* =========================================
+                       WHATSAPP MESSAGE
+                    ========================================== */
+
+                    const whatsappMessage = `
+
+*OJI DREAMLINERS - BOOKING REQUEST* 🚐
+
+Hello OJI Dreamliners Team,
+
+I would like to enquire about booking a caravan.
+
+*CUSTOMER DETAILS*
+
+Name: ${name}
+
+WhatsApp Number: ${phone}
+
+Email: ${email || "Not provided"}
+
+*JOURNEY DETAILS*
+
+Pickup Location: ${pickup}
+
+Destination: ${destination}
+
+Number of Travellers: ${travellers}
+
+Caravan: ${caravan}
+
+*TRAVEL DATES*
+
+Journey Start: ${displayDate(startDate)}
+
+Journey Return: ${displayDate(endDate)}
+
+*ADDITIONAL REQUIREMENTS*
+
+${message || "No additional requirements."}
+
+Please confirm the caravan availability and booking details.
+
+Thank you.
+
+`;
+
+
+
+                    /* =========================================
+                       WHATSAPP URL
+                    ========================================== */
+
+                    const whatsappURL =
+
+                        "https://wa.me/" +
+
+                        WHATSAPP_NUMBER +
+
+                        "?text=" +
+
+                        encodeURIComponent(
+                            whatsappMessage
+                        );
+
+
+
+                    /* =========================================
+                       OPEN WHATSAPP
+                    ========================================== */
+
+                    window.open(
+                        whatsappURL,
+                        "_blank"
+                    );
+
+                }
+            );
+
+
+
+        /* =====================================================
+           17. INITIALIZE CALENDAR
+        ====================================================== */
+
+        renderCalendar();
+
+    </script>
+
+
+
+    <!-- =====================================================
+         BOOTSTRAP JAVASCRIPT
+
+         Required for:
+         - Responsive navbar hamburger
+         - Navbar collapse
+         - Bootstrap components
+
+         IMPORTANT:
+         This is NOT your navbar JavaScript.
+         It is Bootstrap's required JS.
+    ====================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+
+    <!-- =====================================================
+         YOUR EXISTING JAVASCRIPT FILE
+
+         Navbar JS remains here.
+
+         DO NOT MOVE NAVBAR JS INTO Booking.html.
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
