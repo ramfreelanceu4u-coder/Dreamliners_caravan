@@ -1,0 +1,4947 @@
+/* =========================================================
+   OJI CARAVAN
+   CUSTOM CSS
+   Bootstrap handles the responsive grid/layout.
+========================================================= */
+
+
+/* =========================================================
+   01. GLOBAL SETTINGS
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    /* =====================================================
+       CHANGE DEFAULT FONT HERE
+    ====================================================== */
+
+    font-family: "DM Sans", sans-serif;
+
+
+    /* =====================================================
+       CHANGE MAIN PAGE TEXT COLOR HERE
+    ====================================================== */
+
+    color: #151515;
+
+
+    /* =====================================================
+       CHANGE MAIN PAGE BACKGROUND HERE
+    ====================================================== */
+
+    background: #f4f1ea;
+
+    overflow-x: hidden;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   02. NAVBAR
+========================================================= */
+
+.oji-navbar {
+
+    /* =====================================================
+       CHANGE NAVBAR HEIGHT HERE
+
+       More height:
+       padding: 20px 0;
+
+       Less height:
+       padding: 10px 0;
+    ====================================================== */
+
+    padding: 14px 0;
+
+
+    /* =====================================================
+       NAVBAR BACKGROUND
+    ====================================================== */
+
+    background: rgba(0, 0, 0, 0.15);
+
+
+    backdrop-filter: blur(8px);
+
+    transition: all 0.35s ease;
+}
+
+
+/* Navbar after scrolling */
+
+.oji-navbar.scrolled {
+
+    /* CHANGE SCROLLED NAVBAR BACKGROUND HERE */
+
+    background: rgba(8, 8, 8, 0.97);
+
+    padding: 9px 0;
+}
+
+/* Navbar - Black background & White brand on all screens */
+
+.oji-navbar {
+    background-color: #000000 !important;
+}
+
+.oji-navbar .navbar-brand {
+    color: #ffffff !important;
+}
+
+/* =========================================================
+   ABOUT PAGE NAVBAR — FIX ALL 3 SCREENS
+========================================================= */
+
+/* Navbar background */
+.oji-navbar {
+    background: #000000 !important;
+}
+
+/* Dreamliners / Brand text */
+.oji-navbar .navbar-brand,
+.oji-navbar .navbar-brand span {
+    color: #ffffff !important;
+}
+
+/* Navbar options */
+.oji-navbar .oji-nav-link {
+    color: #ffffff !important;
+}
+
+/* Hover / Active */
+.oji-navbar .oji-nav-link:hover,
+.oji-navbar .oji-nav-link.active {
+    color: #f4a900 !important;
+}
+
+/* Booking button */
+.oji-navbar .oji-nav-button {
+    background: #f4a900 !important;
+    color: #ffffff !important;
+}
+
+/* =========================================================
+   TABLET + MOBILE — BLACK DROPDOWN
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .oji-navbar {
+        background: #000000 !important;
+    }
+
+    .oji-navbar .navbar-collapse {
+        background: #000000 !important;
+    }
+
+    .oji-navbar .navbar-nav {
+        background: #000000 !important;
+    }
+
+    .oji-navbar .nav-item {
+        background: #000000 !important;
+    }
+
+    .oji-navbar .oji-nav-link {
+        color: #ffffff !important;
+    }
+
+    .oji-navbar .navbar-brand,
+    .oji-navbar .navbar-brand span {
+        color: #ffffff !important;
+    }
+
+    /* Hamburger */
+    .oji-navbar .navbar-toggler {
+        border-color: transparent !important;
+    }
+
+    .oji-navbar .navbar-toggler-icon {
+        filter: brightness(0) invert(1) !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .oji-navbar,
+    .oji-navbar .navbar-collapse,
+    .oji-navbar .navbar-nav,
+    .oji-navbar .nav-item {
+        background: #000000 !important;
+    }
+
+    .oji-navbar .navbar-brand,
+    .oji-navbar .navbar-brand span {
+        color: #ffffff !important;
+    }
+
+    .oji-navbar .oji-nav-link {
+        color: #ffffff !important;
+    }
+}
+
+
+.oji-nav-link.active {
+    color: #f4a900 !important;
+}
+
+.oji-nav-link.active::after {
+    width: 100% !important;
+}
+
+
+
+/* Desktop */
+@media (min-width: 992px) {
+    .oji-navbar {
+        background-color: #000000 !important;
+    }
+
+    .oji-navbar .navbar-brand {
+        color: #ffffff !important;
+    }
+}
+
+/* Tablet */
+@media (min-width: 576px) and (max-width: 991px) {
+    .oji-navbar {
+        background-color: #000000 !important;
+    }
+
+    .oji-navbar .navbar-brand {
+        color: #ffffff !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+    .oji-navbar {
+        background-color: #000000 !important;
+    }
+
+    .oji-navbar .navbar-brand {
+        color: #ffffff !important;
+    }
+}
+
+
+/* Navbar options - White */
+.oji-navbar .oji-nav-link {
+    color: #ffffff !important;
+}
+
+/* Booking button - Orange */
+.oji-navbar .oji-nav-button {
+    background-color: #f4a900 !important;
+    color: #ffffff !important;
+    border-color: #f4a900 !important;
+}
+
+/* Booking button hover */
+.oji-navbar .oji-nav-button:hover {
+    background-color: #d99100 !important;
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.oji-brand img {
+
+    /* =====================================================
+       CHANGE LOGO WIDTH HERE
+
+       Desktop:
+       175px
+
+       Smaller:
+       140px
+
+       Bigger:
+       210px
+    ====================================================== */
+
+    width: 75px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   NAVBAR LINKS
+========================================================= */
+
+.oji-nav-link {
+
+    /* CHANGE NAV TEXT SIZE HERE */
+
+    font-size: 20px !important;
+
+
+    /* CHANGE NAV TEXT COLOR HERE */
+
+    color: #ffffff !important;
+
+
+    font-weight: 500;
+
+    position: relative;
+
+    transition: 0.3s ease;
+}
+
+
+.oji-nav-link:hover {
+
+    /* CHANGE NAV HOVER COLOR HERE */
+
+    color: #f4a900 !important;
+}
+
+
+.oji-nav-link.active {
+
+    color: #f4a900 !important;
+}
+
+
+/* =========================================================
+   NAVBAR BOOK BUTTON
+========================================================= */
+
+.oji-nav-button {
+
+    /* CHANGE NAV BUTTON PADDING HERE */
+
+    padding: 11px 20px;
+
+
+    /* CHANGE NAV BUTTON BACKGROUND HERE */
+
+    background: #f4a900;
+
+
+    /* CHANGE NAV BUTTON TEXT COLOR HERE */
+
+    color: #111111;
+
+
+    border-radius: 50px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+
+.oji-nav-button:hover {
+
+    background: #ffffff;
+
+    color: #111111;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MOBILE NAVBAR BUTTON
+========================================================= */
+
+.oji-toggler {
+
+    border: none;
+
+    outline: none;
+
+    box-shadow: none !important;
+}
+
+
+/* Bootstrap hamburger icon color */
+
+.oji-toggler .navbar-toggler-icon {
+
+    filter: brightness(0) invert(1);
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION BACKGROUND
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .oji-navbar {
+
+        background: rgba(8, 8, 8, 0.96);
+
+    }
+
+
+    .navbar-collapse {
+
+        padding: 20px 0 10px;
+    }
+
+
+    .oji-nav-link {
+
+        padding: 10px 0 !important;
+    }
+
+
+    .oji-nav-button {
+
+        display: inline-block;
+
+        margin-top: 5px;
+    }
+
+}
+
+/* =========================================================
+   03. HERO SECTION
+========================================================= */
+
+.hero-section {
+
+    /* =====================================================
+       CHANGE HERO HEIGHT HERE
+
+       Full desktop:
+       100vh
+
+       Fixed:
+       850px
+
+       Smaller:
+       750px
+    ====================================================== */
+
+    min-height: 100vh;
+
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* Mobile Navbar Logo - Same Size as Home Page */
+@media (max-width: 768px) {
+    .navbar .logo,
+    .navbar-brand,
+    .nav-logo {
+        font-size: 22px !important;
+        width: auto;
+        height: auto;
+    }
+
+    .navbar .logo img,
+    .navbar-brand img,
+    .nav-logo img {
+        width: 50px !important;
+        height: auto !important;
+    }
+}
+
+
+
+
+/* =========================================================
+   HERO VIDEO
+========================================================= */
+
+.hero-video {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+
+    /* CHANGE VIDEO CROPPING HERE */
+
+    object-fit: cover;
+
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+
+    /* =====================================================
+       CHANGE VIDEO DARKNESS HERE
+
+       Darker:
+       0.85
+
+       Lighter:
+       0.35
+    ====================================================== */
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.82),
+            rgba(0,0,0,0.48),
+            rgba(0,0,0,0.18)
+        );
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding-top: 90px;
+
+    padding-bottom: 80px;
+}
+
+
+/* =========================================================
+   HERO LABEL
+========================================================= */
+
+.hero-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+
+    /* CHANGE HERO LABEL TEXT SIZE HERE */
+
+    font-size: 12px;
+
+
+    /* CHANGE HERO LABEL COLOR HERE */
+
+    color: #ffffff;
+
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+}
+
+
+.hero-label span {
+
+    width: 38px;
+
+    height: 2px;
+
+    background: #f4a900;
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.hero-title {
+
+    margin-top: 22px;
+
+
+    /* =====================================================
+       CHANGE HERO HEADING SIZE HERE
+
+       Desktop:
+       90px
+
+       Tablet:
+       65px
+
+       Mobile:
+       45px
+    ====================================================== */
+
+    font-size: clamp(
+        48px,
+        7vw,
+        95px
+    );
+
+
+    /* CHANGE HERO HEADING COLOR HERE */
+
+    color: #ffffff;
+
+
+    font-family: "Playfair Display", serif;
+
+    font-weight: 700;
+
+    line-height: 0.98;
+
+    letter-spacing: -2px;
+}
+
+
+.hero-title span {
+
+    /* CHANGE HIGHLIGHT COLOR HERE */
+
+    color: #f4a900;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.hero-description {
+
+    max-width: 600px;
+
+    margin-top: 28px;
+
+
+    /* CHANGE HERO DESCRIPTION SIZE HERE */
+
+    font-size: 17px;
+
+
+    /* CHANGE HERO DESCRIPTION COLOR HERE */
+
+    color: rgba(255,255,255,0.85);
+
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   HERO PRIMARY BUTTON
+========================================================= */
+
+.oji-primary-btn {
+
+    /* CHANGE BUTTON SIZE HERE */
+
+    padding: 14px 25px;
+
+
+    background: #f4a900;
+
+    color: #111111;
+
+    border-radius: 50px;
+
+
+    /* CHANGE BUTTON TEXT SIZE HERE */
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    border: none;
+
+    transition: 0.3s ease;
+}
+
+
+.oji-primary-btn:hover {
+
+    background: #ffffff;
+
+    color: #111111;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   HERO OUTLINE BUTTON
+========================================================= */
+
+.oji-outline-btn {
+
+    padding: 14px 25px;
+
+    border: 1px solid rgba(255,255,255,0.7);
+
+    color: #ffffff;
+
+    border-radius: 50px;
+
+
+    /* CHANGE BUTTON TEXT SIZE HERE */
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+
+.oji-outline-btn:hover {
+
+    background: #ffffff;
+
+    color: #111111;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   HERO FEATURES
+========================================================= */
+
+.hero-features {
+
+    max-width: 650px;
+}
+
+
+.hero-feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+
+    /* CHANGE FEATURE TEXT SIZE HERE */
+
+    font-size: 12px;
+
+
+    color: rgba(255,255,255,0.85);
+}
+
+
+.hero-feature i {
+
+    /* CHANGE FEATURE ICON SIZE HERE */
+
+    font-size: 18px;
+
+
+    color: #f4a900;
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.scroll-indicator {
+
+    position: absolute;
+
+    right: 5%;
+
+    bottom: 35px;
+
+    z-index: 3;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: white;
+
+
+    /* CHANGE SCROLL TEXT SIZE HERE */
+
+    font-size: 10px;
+
+
+    letter-spacing: 2px;
+}
+
+
+.scroll-indicator i {
+
+    font-size: 18px;
+
+    animation: scrollArrow 1.5s infinite;
+}
+
+
+@keyframes scrollArrow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(7px);
+    }
+
+}
+
+
+/* =========================================================
+   04. EXPERIENCE SECTION
+========================================================= */
+
+.experience-section {
+
+    /* =====================================================
+       CHANGE SECTION HEIGHT / SPACING HERE
+
+       Bigger:
+       140px 0
+
+       Smaller:
+       80px 0
+    ====================================================== */
+
+    padding: 120px 0;
+
+
+    /* CHANGE SECTION BACKGROUND HERE */
+
+    background: #f4f1ea;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.section-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+
+    /* CHANGE SECTION LABEL TEXT SIZE HERE */
+
+    font-size: 12px;
+
+
+    color: #777777;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+}
+
+
+.section-label span {
+
+    width: 38px;
+
+    height: 2px;
+
+    background: #f4a900;
+}
+
+
+.light-label {
+
+    color: #999999;
+}
+
+
+/* =========================================================
+   EXPERIENCE HEADING
+========================================================= */
+
+.experience-title {
+
+    margin-top: 20px;
+
+
+    /* CHANGE EXPERIENCE HEADING SIZE HERE */
+
+    font-size: clamp(
+        45px,
+        5vw,
+        75px
+    );
+
+
+    /* CHANGE EXPERIENCE HEADING COLOR HERE */
+
+    color: #111111;
+
+
+    font-family: "Playfair Display", serif;
+
+    line-height: 1.05;
+
+    font-weight: 600;
+}
+
+
+.experience-title span {
+
+    color: #d89200;
+}
+
+
+/* =========================================================
+   EXPERIENCE TEXT
+========================================================= */
+
+.experience-text {
+
+    margin-top: 20px;
+
+
+    /* CHANGE EXPERIENCE TEXT SIZE HERE */
+
+    font-size: 16px;
+
+
+    /* CHANGE EXPERIENCE TEXT COLOR HERE */
+
+    color: #666666;
+
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   DARK BUTTON
+========================================================= */
+
+.oji-dark-btn {
+
+    padding: 14px 23px;
+
+    background: #111111;
+
+    color: white;
+
+    border-radius: 50px;
+
+    border: 1px solid #111111;
+
+
+    /* CHANGE BUTTON TEXT SIZE HERE */
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+.oji-dark-btn:hover {
+
+    background: #f4a900;
+
+    color: #111111;
+
+    border-color: #f4a900;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   LIGHT BUTTON
+========================================================= */
+
+.oji-light-btn {
+
+    padding: 14px 23px;
+
+    background: transparent;
+
+    color: #111111;
+
+    border-radius: 50px;
+
+    border: 1px solid #111111;
+
+
+    /* CHANGE BUTTON TEXT SIZE HERE */
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+.oji-light-btn:hover {
+
+    background: #111111;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   EXPERIENCE IMAGE
+========================================================= */
+
+.experience-image-box {
+
+    position: relative;
+
+    overflow: visible;
+}
+
+
+.experience-image-box img {
+
+    width: 100%;
+
+
+    /* =====================================================
+       CHANGE SECOND HERO IMAGE HEIGHT HERE
+
+       Desktop:
+       600px
+
+       Tablet:
+       500px
+
+       Mobile:
+       400px
+    ====================================================== */
+
+    height: 420px;
+
+
+    object-fit: cover;
+
+    border-radius: 30px;
+
+    transition: 0.6s ease;
+}
+
+
+.experience-image-box:hover img {
+
+    transform: scale(1.02);
+}
+
+
+/* =========================================================
+   FLOATING BADGE
+========================================================= */
+
+.experience-badge {
+
+    position: absolute;
+
+    left: -30px;
+
+    bottom: 40px;
+
+
+    /* CHANGE BADGE WIDTH/HEIGHT HERE */
+
+    width: 135px;
+
+    height: 135px;
+
+
+    background: #f4a900;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+
+.experience-badge strong {
+
+    /* CHANGE BADGE MAIN TEXT SIZE */
+
+    font-size: 30px;
+
+    font-family: "Playfair Display", serif;
+}
+
+
+.experience-badge span {
+
+    /* CHANGE BADGE SMALL TEXT SIZE */
+
+    font-size: 10px;
+
+    line-height: 1.4;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   05. FEATURES SECTION
+========================================================= */
+
+.features-section {
+
+    /* CHANGE SECTION SPACING HERE */
+
+    padding: 110px 0;
+
+
+    /* CHANGE SECTION BACKGROUND HERE */
+
+    background: #111111;
+}
+
+
+/* =========================================================
+   FEATURES HEADING
+========================================================= */
+
+.features-title {
+
+    margin-top: 20px;
+
+
+    /* CHANGE FEATURES HEADING SIZE HERE */
+
+    font-size: clamp(
+        25px,
+        5vw,
+        75px
+    );
+
+
+    color: #ffffff;
+
+    font-family: "Playfair Display", serif;
+
+    line-height: 1.05;
+}
+
+
+.features-title span {
+
+    color: #f4a900;
+}
+
+
+/* =========================================================
+   FEATURE CARD
+========================================================= */
+
+.feature-card {
+
+    position: relative;
+
+
+    /* =====================================================
+       CHANGE CARD MINIMUM HEIGHT HERE
+
+       Bigger:
+       400px
+
+       Smaller:
+       300px
+    ====================================================== */
+
+    min-height: 350px;
+
+
+    /* CHANGE CARD PADDING HERE */
+
+    padding: 32px;
+
+
+    background: rgba(255,255,255,0.035);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 22px;
+
+    transition: 0.4s ease;
+
+    overflow: hidden;
+}
+
+
+.feature-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: #f4a900;
+
+    background: rgba(255,255,255,0.07);
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.feature-number {
+
+    position: absolute;
+
+    right: 25px;
+
+    top: 22px;
+
+
+    /* CHANGE NUMBER TEXT SIZE HERE */
+
+    font-size: 12px;
+
+
+    color: #666666;
+}
+
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.feature-icon {
+
+    /* CHANGE ICON CIRCLE SIZE HERE */
+
+    width: 65px;
+
+    height: 65px;
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+    background: #f4a900;
+
+    color: #111111;
+
+    border-radius: 50%;
+
+
+    /* CHANGE ICON SIZE HERE */
+
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.feature-card h3 {
+
+    margin-top: 30px;
+
+
+    /* CHANGE CARD TITLE SIZE HERE */
+
+    font-size: 24px;
+
+
+    color: #ffffff;
+
+    font-family: "Playfair Display", serif;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.feature-card p {
+
+    margin-top: 14px;
+
+
+    /* CHANGE CARD DESCRIPTION SIZE HERE */
+
+    font-size: 14px;
+
+
+    /* CHANGE CARD DESCRIPTION COLOR HERE */
+
+    color: #aaaaaa;
+
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CARD LINK
+========================================================= */
+
+.feature-card a {
+
+    position: absolute;
+
+    left: 32px;
+
+    bottom: 28px;
+
+
+    /* CHANGE CARD LINK COLOR HERE */
+
+    color: #f4a900;
+
+
+    /* CHANGE CARD LINK SIZE HERE */
+
+    font-size: 12px;
+
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   06. BOOKING CTA
+========================================================= */
+
+.booking-section {
+
+    /* =====================================================
+       CHANGE BOOKING SECTION HEIGHT/SPACING HERE
+    ====================================================== */
+
+    padding: 130px 0;
+
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.72),
+            rgba(0,0,0,0.72)
+        ),
+        url("assets/caravan-main.jpg");
+
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+    color: white;
+}
+
+
+/* =========================================================
+   BOOKING LABEL
+========================================================= */
+
+.booking-label {
+
+    /* CHANGE BOOKING LABEL SIZE HERE */
+
+    font-size: 12px;
+
+
+    color: #f4a900;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   BOOKING HEADING
+========================================================= */
+
+.booking-content h2 {
+
+    margin-top: 20px;
+
+
+    /* CHANGE BOOKING HEADING SIZE HERE */
+
+    font-size: clamp(
+        45px,
+        6vw,
+        75px
+    );
+
+
+    font-family: "Playfair Display", serif;
+
+    line-height: 1;
+}
+
+
+.booking-content h2 span {
+
+    color: #f4a900;
+}
+
+
+/* =========================================================
+   BOOKING DESCRIPTION
+========================================================= */
+
+.booking-content p {
+
+    margin-top: 20px;
+
+
+    /* CHANGE BOOKING DESCRIPTION SIZE HERE */
+
+    font-size: 16px;
+
+
+    /* CHANGE BOOKING DESCRIPTION COLOR HERE */
+
+    color: #dddddd;
+
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BOOKING BUTTONS
+========================================================= */
+
+.booking-call-btn {
+
+    padding: 14px 24px;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+.booking-whatsapp-btn {
+
+    padding: 14px 24px;
+
+    background: #f4a900;
+
+    color: #111111;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+.booking-call-btn:hover,
+.booking-whatsapp-btn:hover {
+
+    background: #111111;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   07. FOOTER
+========================================================= */
+
+.oji-footer {
+
+    /* CHANGE FOOTER SPACING HERE */
+
+    padding: 60px 0 20px;
+
+
+    /* CHANGE FOOTER BACKGROUND HERE */
+
+    background: #080808;
+
+    color: white;
+}
+
+
+/* =========================================================
+   FOOTER LOGO
+========================================================= */
+
+.footer-brand img {
+
+    /* CHANGE FOOTER LOGO WIDTH HERE */
+
+    width: 180px;
+
+    margin: auto;
+}
+
+
+.footer-brand p {
+
+    margin-top: 12px;
+
+
+    /* CHANGE FOOTER TEXT SIZE HERE */
+
+    font-size: 13px;
+
+
+    color: #888888;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.footer-links {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+}
+
+
+.footer-links a {
+
+    /* CHANGE FOOTER LINK SIZE HERE */
+
+    font-size: 13px;
+
+
+    color: #aaaaaa;
+
+    transition: 0.3s;
+}
+
+
+.footer-links a:hover {
+
+    color: #f4a900;
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.footer-social {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.footer-social a {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid #333333;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    transition: 0.3s;
+}
+
+
+.footer-social a:hover {
+
+    background: #f4a900;
+
+    color: #111111;
+
+    border-color: #f4a900;
+}
+
+
+/* =========================================================
+   FOOTER COPYRIGHT
+========================================================= */
+
+.footer-bottom {
+
+    margin-top: 45px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #222222;
+
+    text-align: center;
+
+
+    /* CHANGE COPYRIGHT TEXT SIZE HERE */
+
+    font-size: 12px;
+
+
+    color: #666666;
+}
+
+
+/* =========================================================
+   08. TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+
+    /* =====================================================
+       TABLET HERO
+    ====================================================== */
+
+    .hero-section {
+
+        /* CHANGE TABLET HERO HEIGHT HERE */
+
+        min-height: 850px;
+    }
+
+
+    .hero-title {
+
+        /* CHANGE TABLET HEADING SIZE HERE */
+
+        font-size: 68px;
+    }
+
+
+    /* =====================================================
+       TABLET EXPERIENCE IMAGE
+    ====================================================== */
+
+    .experience-image-box img {
+
+        /* CHANGE TABLET IMAGE HEIGHT HERE */
+
+        height: 500px;
+    }
+
+
+    .experience-badge {
+
+        left: 20px;
+    }
+
+
+    /* =====================================================
+       TABLET FEATURES
+    ====================================================== */
+
+    .feature-card {
+
+        min-height: 330px;
+    }
+
+}
+
+
+/* =========================================================
+   09. MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+
+    /* =====================================================
+       MOBILE NAVBAR
+    ====================================================== */
+
+    .oji-brand img {
+
+        /* CHANGE MOBILE LOGO WIDTH HERE */
+
+        width: 135px;
+    }
+
+
+    /* =====================================================
+       MOBILE HERO
+    ====================================================== */
+
+    .hero-section {
+
+        /* CHANGE MOBILE HERO HEIGHT HERE */
+
+        min-height: 800px;
+    }
+
+
+    .hero-content {
+
+        padding-top: 100px;
+
+        padding-bottom: 70px;
+    }
+
+
+    /* =====================================================
+       MOBILE HERO HEADING
+    ====================================================== */
+
+    .hero-title {
+
+        /* CHANGE MOBILE HERO HEADING SIZE HERE */
+
+        font-size: 48px;
+
+        letter-spacing: -1px;
+    }
+
+
+    /* =====================================================
+       MOBILE DESCRIPTION
+    ====================================================== */
+
+    .hero-description {
+
+        /* CHANGE MOBILE DESCRIPTION SIZE HERE */
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       MOBILE HERO FEATURES
+    ====================================================== */
+
+    .hero-feature {
+
+        /* CHANGE MOBILE FEATURE TEXT SIZE */
+
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       MOBILE EXPERIENCE
+    ====================================================== */
+
+    .experience-section {
+
+        /* CHANGE MOBILE SECTION SPACING HERE */
+
+        padding: 80px 0;
+    }
+
+
+    .experience-title {
+
+        /* CHANGE MOBILE EXPERIENCE HEADING SIZE */
+
+        font-size: 45px;
+    }
+
+
+    .experience-text {
+
+        /* CHANGE MOBILE EXPERIENCE TEXT SIZE */
+
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       MOBILE IMAGE
+    ====================================================== */
+
+    .experience-image-box img {
+
+        /* CHANGE MOBILE IMAGE HEIGHT HERE */
+
+        height: 430px;
+
+        border-radius: 22px;
+    }
+
+
+    /* =====================================================
+       MOBILE BADGE
+    ====================================================== */
+
+    .experience-badge {
+
+        /* CHANGE MOBILE BADGE SIZE */
+
+        width: 105px;
+
+        height: 105px;
+
+        left: 15px;
+
+        bottom: 20px;
+    }
+
+
+    .experience-badge strong {
+
+        font-size: 25px;
+    }
+
+
+    .experience-badge span {
+
+        font-size: 8px;
+    }
+
+
+    /* =====================================================
+       MOBILE FEATURES
+    ====================================================== */
+
+    .features-section {
+
+        /* CHANGE MOBILE FEATURE SECTION SPACING */
+
+        padding: 80px 0;
+    }
+
+
+    .features-title {
+
+        /* CHANGE MOBILE FEATURE HEADING SIZE */
+
+        font-size: 45px;
+    }
+
+
+    .feature-card {
+
+        /* CHANGE MOBILE CARD HEIGHT */
+
+        min-height: 330px;
+    }
+
+
+    /* =====================================================
+       MOBILE BOOKING
+    ====================================================== */
+
+    .booking-section {
+
+        /* CHANGE MOBILE BOOKING SPACING */
+
+        padding: 90px 0;
+
+        background-attachment: scroll;
+    }
+
+
+    .booking-content h2 {
+
+        /* CHANGE MOBILE BOOKING HEADING SIZE */
+
+        font-size: 45px;
+    }
+
+
+    .booking-content p {
+
+        /* CHANGE MOBILE BOOKING TEXT SIZE */
+
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       MOBILE FOOTER
+    ====================================================== */
+
+    .oji-footer {
+
+        /* CHANGE MOBILE FOOTER SPACING */
+
+        padding: 50px 0 20px;
+    }
+
+
+    .footer-brand img {
+
+        width: 160px;
+    }
+
+
+    .footer-links {
+
+        justify-content: center;
+
+        gap: 15px 20px;
+    }
+
+
+    .footer-social {
+
+        justify-content: center;
+    }
+
+}
+
+
+/* =========================================================
+   10. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+
+    .hero-title {
+
+        /* CHANGE VERY SMALL MOBILE HEADING */
+
+        font-size: 42px;
+    }
+
+
+    .hero-feature {
+
+        font-size: 10px;
+    }
+
+
+    .experience-title {
+
+        font-size: 40px;
+    }
+
+
+    .features-title {
+
+        font-size: 40px;
+    }
+
+
+    .booking-content h2 {
+
+        font-size: 40px;
+    }
+
+}
+
+/* =========================================================
+   OJI CARAVAN NAVBAR BRAND
+========================================================= */
+
+.oji-brand {
+
+    /* LOGO + TEXT WILL STAY SIDE BY SIDE */
+
+    display: flex;
+
+    align-items: center;
+
+    /* =====================================================
+       CHANGE SPACE BETWEEN LOGO AND TEXT HERE
+
+       Smaller:
+       gap: 8px;
+
+       Bigger:
+       gap: 20px;
+    ====================================================== */
+
+    gap: 18px;
+
+    padding: 0;
+
+    text-decoration: none;
+}
+
+/* =========================================================
+   OJI CARAVAN NAVBAR BRAND
+========================================================= */
+
+.oji-brand {
+
+    /* LOGO + TEXT WILL STAY SIDE BY SIDE */
+
+    display: flex;
+
+    align-items: center;
+
+    /* =====================================================
+       CHANGE SPACE BETWEEN LOGO AND TEXT HERE
+
+       Smaller:
+       gap: 8px;
+
+       Bigger:
+       gap: 20px;
+    ====================================================== */
+
+    gap: 18px;
+
+    padding: 0;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   BRAND TEXT CONTAINER
+========================================================= */
+
+.brand-text {
+
+    /* Put DREAMLINERS above CARAVAN */
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    line-height: 1;
+
+}
+
+
+/* =========================================================
+   DREAMLINERS
+========================================================= */
+
+.brand-title {
+
+    /* =====================================================
+       CHANGE DREAMLINERS TEXT SIZE HERE
+    ====================================================== */
+
+    font-size: 20px;
+
+
+    /* =====================================================
+       CHANGE DREAMLINERS TEXT COLOR HERE
+    ====================================================== */
+
+    color: #ffffff;
+
+
+    /* Bold */
+
+    font-weight: 800;
+
+
+    /* =====================================================
+       CHANGE LETTER SPACING HERE
+    ====================================================== */
+
+    letter-spacing: 1px;
+
+
+    white-space: nowrap;
+
+}
+
+/* =========================================================
+   CARAVAN
+========================================================= */
+
+.brand-subtitle {
+
+    /* =====================================================
+       CHANGE CARAVAN TEXT SIZE HERE
+    ====================================================== */
+
+    font-size: 10px;
+
+
+    /* =====================================================
+       CHANGE CARAVAN TEXT COLOR HERE
+    ====================================================== */
+
+    color: #ffffff;
+
+
+    /* Bold */
+
+    font-weight: 700;
+
+
+    /* =====================================================
+       CHANGE LETTER SPACING HERE
+    ====================================================== */
+
+    letter-spacing: 1px;
+
+
+    /* =====================================================
+       MOVE CARAVAN LEFT / RIGHT
+
+       Negative = left
+       Positive = right
+    ====================================================== */
+
+    margin-left: 40px;
+
+
+    margin-top: 6px;
+
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================
+   EXPERIENCE OJI CARAVAN IMAGE
+   ========================================= */
+
+.experience-caravan-img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    /* Shows the complete image */
+    object-fit: contain;
+}
+
+/* =========================================================
+   HERO TITLE
+   ========================================================= */
+
+.hero-title {
+    font-size: 65px;          /* 👈 Main heading size */
+    line-height: 0.95;        /* 👈 Controls spacing between lines */
+    font-weight: 700;         /* 👈 Heading thickness */
+
+    margin: 0;                /* 👈 Removes default H1 margin */
+    padding: 0;               /* 👈 Removes extra padding */
+
+    letter-spacing: -1.5px;   /* 👈 Controls spacing between letters */
+}
+
+
+/* =========================================================
+   SECOND LINE
+   ========================================================= */
+
+.hero-title span {
+    display: inline;          /* 👈 Keeps it close to first line */
+
+    margin: 0;
+    padding: 0;
+
+    line-height: 0.95;
+}
+
+
+/* =========================================================
+   OPTIONAL: CONTROL SPACE AFTER HEADING
+   ========================================================= */
+
+.hero-title + p {
+    margin-top: 25px;         /* 👈 Change this to 15px / 20px / 30px */
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .hero-title {
+        font-size: 55px;
+        line-height: 0.95;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    .hero-title {
+        font-size: 1px;
+        line-height: 1;
+        letter-spacing: -0.5px;
+    }
+
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+
+    .hero-features {
+        margin-top: 60px !important; /* 👈 Reduce spacing */
+    }
+
+}
+
+/* =========================================================
+   FLIP CARD FUNCTIONALITY
+   This CSS only adds the flipping functionality.
+   Existing .feature-card styling is NOT changed.
+   ========================================================= */
+
+.feature-card-flip {
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+
+    perspective: 1200px;
+}
+
+
+/* Inner element responsible for rotation */
+
+.feature-card-inner {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+
+    transform-style: preserve-3d;
+
+    transition: transform 0.8s ease;
+}
+
+
+/* Flip on hover */
+
+.feature-card-flip:hover .feature-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* Front + existing card */
+
+.feature-card-front,
+.feature-card-inner > .feature-card {
+
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+
+/* =========================================================
+   FRONT IMAGE
+   ========================================================= */
+
+.feature-card-front {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    border-radius: inherit;
+
+    z-index: 2;
+}
+
+
+/* Image fills the complete front */
+
+.feature-card-front img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================================================
+   EXISTING CARD = BACK SIDE
+   ========================================================= */
+
+.feature-card-inner > .feature-card {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    transform: rotateY(180deg);
+
+    z-index: 1;
+}
+
+/* =========================================================
+   FLIP CARD FUNCTIONALITY
+   ========================================================= */
+
+.feature-card-flip {
+    width: 100%;
+    height: 140px;              /* 👈 REDUCED CARD HEIGHT */
+    perspective: 1200px;
+}
+
+.feature-card-inner {
+    position: relative;
+    width: 100%;
+    height: 340px;              /* 👈 SAME HEIGHT */
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+.feature-card-flip:hover .feature-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* FRONT IMAGE */
+
+.feature-card-front {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 340px;
+
+    overflow: hidden;
+    border-radius: inherit;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.feature-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* EXISTING CARD = BACK */
+
+.feature-card-inner > .feature-card {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 340px;
+
+    transform: rotateY(180deg);
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* =========================================================
+   CARAVAN IMAGE - CURVED EDGES + BORDER
+   ========================================================= */
+
+.feature-card-front {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 340px;
+
+    overflow: hidden;
+
+    /* 👇 Curved corners */
+    border-radius: 20px;
+
+    /* 👇 Border color + thickness */
+    border: 2px solid #f5b400;
+
+    box-sizing: border-box;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.feature-card-front img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    /* 👇 Same curved edges as card */
+    border-radius: 18px;
+}
+
+
+/* =========================================================
+   OJI CARAVAN FLIP CARDS - REDUCE HEIGHT
+   Put this AFTER all your existing .feature-card CSS
+   ========================================================= */
+
+.feature-card-flip {
+    height: 340px !important;
+    min-height: 0 !important;
+}
+
+.feature-card-inner {
+    height: 340px !important;
+    min-height: 0 !important;
+}
+
+
+/* FRONT IMAGE */
+
+.feature-card-front {
+    height: 340px !important;
+    min-height: 0 !important;
+
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+
+/* BACK SIDE - YOUR EXISTING CARD */
+
+.feature-card-inner > .feature-card {
+    height: 340px !important;
+    min-height: 0 !important;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================
+   HERO FEATURES - DESKTOP
+   ========================================= */
+
+.hero-features {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   DESKTOP
+   992px and above
+   ========================================================= */
+
+@media (min-width: 992px) {
+
+    .hero-features {
+        margin-top: 50px !important;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   577px - 991px
+   ========================================================= */
+
+@media (min-width: 577px) and (max-width: 991px) {
+
+    .hero-features {
+        margin-top: 200px !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   576px and below
+   ========================================================= */
+
+   /* =========================================================
+   MOBILE HERO FEATURES
+   576px AND BELOW
+   ========================================================= */
+
+/* =========================================================
+   MOBILE HERO CONTENT - TOP SPACING
+   ========================================================= */
+
+/* =========================================================
+   MOBILE HERO TOP SPACING
+   Moves the complete hero text downward
+   ========================================================= */
+
+@media screen and (max-width: 576px) {
+
+    .hero-content {
+        padding-top: 100px !important;
+    }
+
+}
+
+
+/* 1 go 2400 lines from index.html css */
+
+/* about.css */
+
+/* =========================================================
+   OJI CARAVANS
+   ABOUT PAGE CUSTOM CSS
+
+   Bootstrap handles:
+   - Container
+   - Grid
+   - Columns
+   - Responsive layout
+
+   This CSS handles:
+   - Colors
+   - Typography
+   - Spacing
+   - Cards
+   - Hover effects
+   - Section design
+========================================================= */
+
+
+/* =========================================================
+   01. GLOBAL SETTINGS
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family: "DM Sans", sans-serif;
+
+    background: #ffffff;
+
+    color: #111827;
+
+}
+
+
+/* =========================================================
+   CHANGE MAIN COLORS HERE
+========================================================= */
+
+:root {
+
+    /* Main dark blue */
+
+    --oij-dark: #071b3a;
+
+    --oji-peach: #f4f1ea;
+
+
+    /* Secondary blue */
+
+    --oij-blue: #0d2d5c;
+
+
+    /* Yellow / Gold */
+
+    --oij-yellow: #f4c542;
+
+
+    /* White */
+
+    --oij-white: #ffffff;
+
+
+    /* Light background */
+
+    --oij-light: #f5f7fa;
+
+
+    /* Text */
+
+    --oij-text: #1f2937;
+
+
+    /* Muted text */
+
+    --oij-muted: #6b7280;
+
+}
+
+
+/* =========================================================
+   02. HERO SECTION
+========================================================= */
+
+.about-hero-section {
+
+    /* CHANGE HERO HEIGHT HERE */
+
+    min-height: 650px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 90px 0;
+
+    background: var(--oij-dark);
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   HERO SMALL LABEL
+========================================================= */
+
+.about-label {
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--oij-yellow);
+
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.about-hero-content h1 {
+
+    /* DESKTOP HEADING SIZE */
+
+    font-size: 58px;
+
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* Highlighted heading */
+
+.about-hero-content h1 span {
+
+    color: var(--oij-yellow);
+
+}
+
+
+/* =========================================================
+   HERO PARAGRAPH
+========================================================= */
+
+.about-hero-text {
+
+    max-width: 560px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
+.about-primary-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 25px;
+
+    border-radius: 50px;
+
+    background: var(--oij-yellow);
+
+    color: #111827;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+
+}
+
+
+.about-primary-btn:hover {
+
+    transform: translateY(-3px);
+
+    background: #ffffff;
+
+    color: #111827;
+
+}
+
+
+/* =========================================================
+   HERO IMAGE CONTAINER
+========================================================= */
+
+.about-hero-image {
+
+    width: 100%;
+
+    height: 480px;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    position: relative;
+
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.about-hero-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+
+}
+
+
+.about-hero-image:hover img {
+
+    transform: scale(1.04);
+
+}
+
+
+/* =========================================================
+   03. SERVICES SECTION
+========================================================= */
+
+.about-services-section {
+
+    padding: 100px 0;
+
+    background: var(--oij-light);
+
+}
+
+
+/* =========================================================
+   COMMON SECTION LABEL
+========================================================= */
+
+.section-label {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #c49718;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =========================================================
+   COMMON SECTION TITLE
+========================================================= */
+
+.section-title {
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: var(--oij-dark);
+
+    margin-bottom: 18px;
+
+}
+
+
+/* =========================================================
+   COMMON SECTION DESCRIPTION
+========================================================= */
+
+.section-description {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: var(--oij-muted);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+.service-card {
+
+    height: 100%;
+
+    padding: 35px 28px;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    transition: all 0.3s ease;
+
+}
+
+
+/* =========================================================
+   SERVICE CARD HOVER
+========================================================= */
+
+.service-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: var(--oij-yellow);
+
+    box-shadow: 0 18px 40px rgba(7, 27, 58, 0.10);
+
+}
+
+
+/* =========================================================
+   SERVICE ICON
+========================================================= */
+
+.service-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: var(--oij-dark);
+
+    color: var(--oij-yellow);
+
+    font-size: 25px;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================================================
+   SERVICE HEADING
+========================================================= */
+
+.service-card h3 {
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: var(--oij-dark);
+
+    margin-bottom: 12px;
+
+}
+
+
+/* =========================================================
+   SERVICE TEXT
+========================================================= */
+
+.service-card p {
+
+    color: var(--oij-muted);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 0;
+
+}
+
+
+/* =========================================================
+   04. ACHIEVEMENTS
+========================================================= */
+
+.achievements-heading {
+
+    margin-top: 100px;
+
+}
+
+
+/* =========================================================
+   ACHIEVEMENT CARD
+========================================================= */
+
+.achievement-card {
+
+    text-align: center;
+
+    padding: 30px 20px;
+
+    background: var(--oij-dark);
+
+    border-radius: 18px;
+
+    color: white;
+
+    transition: 0.3s ease;
+
+}
+
+
+.achievement-card:hover {
+
+    transform: translateY(-6px);
+
+}
+
+
+/* =========================================================
+   ACHIEVEMENT ICON
+========================================================= */
+
+.achievement-icon {
+
+    font-size: 25px;
+
+    color: var(--oij-yellow);
+
+    margin-bottom: 12px;
+
+}
+
+
+/* =========================================================
+   ACHIEVEMENT NUMBER
+========================================================= */
+
+.achievement-card h3 {
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    color: white;
+
+    margin-bottom: 5px;
+
+}
+
+
+/* =========================================================
+   ACHIEVEMENT TEXT
+========================================================= */
+
+.achievement-card p {
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.70);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   05. CUSTOMER REVIEWS
+========================================================= */
+
+.about-reviews-section {
+
+    padding: 100px 0;
+
+    background: #ffffff;
+
+}
+
+
+/* =========================================================
+   REVIEW CARD
+========================================================= */
+
+.review-card {
+
+    height: 100%;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    transition: 0.3s ease;
+
+}
+
+
+.review-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 35px rgba(7, 27, 58, 0.10);
+
+}
+
+
+/* =========================================================
+   REVIEW STARS
+========================================================= */
+
+.review-stars {
+
+    color: var(--oij-yellow);
+
+    font-size: 20px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================================================
+   REVIEW TEXT
+========================================================= */
+
+.review-card > p {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: var(--oij-text);
+
+    font-style: italic;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =========================================================
+   CUSTOMER INFORMATION
+========================================================= */
+
+.customer-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+/* =========================================================
+   CUSTOMER AVATAR
+========================================================= */
+
+.customer-avatar {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--oij-dark);
+
+    color: var(--oij-yellow);
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================================
+   CUSTOMER NAME
+========================================================= */
+
+.customer-info h4 {
+
+    margin: 0;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    color: var(--oij-dark);
+
+}
+
+
+/* =========================================================
+   CUSTOMER TYPE
+========================================================= */
+
+.customer-info span {
+
+    font-size: 13px;
+
+    color: var(--oij-muted);
+
+}
+
+
+/* =========================================================
+   06. TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+
+
+    /* HERO */
+
+    .about-hero-section {
+
+        padding: 80px 0;
+
+    }
+
+
+    .about-hero-content h1 {
+
+        font-size: 46px;
+
+    }
+
+
+    .about-hero-image {
+
+        height: 400px;
+
+    }
+
+
+    /* SECTION TITLE */
+
+    .section-title {
+
+        font-size: 36px;
+
+    }
+
+}
+
+
+/* =========================================================
+   07. MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 767px) {
+
+
+    /* HERO */
+
+    .about-hero-section {
+
+        padding: 65px 0;
+
+    }
+
+
+    /* MOBILE HEADING */
+
+    .about-hero-content h1 {
+
+        /* CHANGE MOBILE HEADING SIZE HERE */
+
+        font-size: 38px;
+
+        line-height: 1.12;
+
+    }
+
+
+    /* MOBILE TEXT */
+
+    .about-hero-text {
+
+        font-size: 15px;
+
+        line-height: 1.7;
+
+    }
+
+
+    /* MOBILE IMAGE */
+
+    .about-hero-image {
+
+        height: 320px;
+
+        border-radius: 18px;
+
+    }
+
+
+    /* SECTIONS */
+
+    .about-services-section,
+    .about-reviews-section {
+
+        padding: 70px 0;
+
+    }
+
+
+    /* SECTION HEADING */
+
+    .section-title {
+
+        font-size: 32px;
+
+    }
+
+
+    /* SERVICE CARD */
+
+    .service-card {
+
+        padding: 28px 24px;
+
+    }
+
+
+    /* ACHIEVEMENTS */
+
+    .achievements-heading {
+
+        margin-top: 70px;
+
+    }
+
+
+    /* REVIEW CARD */
+
+    .review-card {
+
+        padding: 28px;
+
+    }
+
+}
+
+
+/* =========================================================
+   08. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+
+    .about-hero-content h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .about-label {
+
+        font-size: 12px;
+
+    }
+
+
+    .section-title {
+
+        font-size: 28px;
+
+    }
+
+
+    .about-hero-image {
+
+        height: 280px;
+
+    }
+
+
+}
+
+
+.experience-section{
+    background-color: black;
+}
+
+
+/* Features Section Heading & Paragraph */
+.features-section .section-title,
+.features-section .section-description {
+    color: #fff !important;
+}
+
+
+
+
+
+
+/* =========================================================
+   OJI CARAVANS - ABOUT PAGE
+   PREMIUM TRAVEL DESIGN
+========================================================= */
+
+
+/* =========================================================
+   GOOGLE FONT
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+
+/* =========================================================
+   ROOT COLORS
+========================================================= */
+
+:root {
+    --cream: #f4f1e9;
+    --black: #111111;
+    --dark-gray: #444444;
+    --white: #ffffff;
+    --orange: #f5a900;
+    --orange-dark: #d99100;
+    --light-border: rgba(17, 17, 17, 0.15);
+    --white-border: rgba(255, 255, 255, 0.18);
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--black);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   COMMON TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+.section-title {
+    font-family: 'Playfair Display', serif;
+}
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 15px;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: var(--orange);
+}
+
+.section-title {
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.05;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.section-description {
+    max-width: 650px;
+    margin: 20px auto 0;
+
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.oji-navbar {
+    padding: 15px 0;
+
+    background: rgba(244, 241, 233, 0.94);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+
+    transition: all 0.3s ease;
+
+    z-index: 9999;
+}
+
+.oji-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.oji-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.brand-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--black);
+}
+
+.brand-subtitle {
+    margin-top: 4px;
+
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--orange);
+}
+
+.oji-nav-link {
+    position: relative;
+
+    padding: 8px 5px !important;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: var(--black) !important;
+
+    transition: color 0.3s ease;
+}
+
+.oji-nav-link::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--orange);
+
+    transition: width 0.3s ease;
+}
+
+.oji-nav-link:hover,
+.oji-nav-link.active {
+    color: var(--orange) !important;
+}
+
+.oji-nav-link:hover::after,
+.oji-nav-link.active::after {
+    width: 100%;
+}
+
+.oji-nav-button {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 11px 18px;
+
+    border-radius: 30px;
+
+    background: var(--black);
+    color: var(--white) !important;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    border: 1px solid var(--black);
+
+    transition: all 0.3s ease;
+}
+
+.oji-nav-button:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: var(--black) !important;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MOBILE NAVBAR
+========================================================= */
+
+.oji-toggler {
+    border: 1px solid var(--black) !important;
+    padding: 7px 10px;
+}
+
+.oji-toggler:focus {
+    box-shadow: none;
+}
+
+.oji-toggler .navbar-toggler-icon {
+    width: 22px;
+    height: 22px;
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.about-hero-section {
+    margin-top: -40px;
+    position: relative;
+
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 150px 0 90px;
+
+    background: var(--cream);
+}
+
+.about-hero-content {
+    max-width: 580px;
+}
+
+.about-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: var(--orange);
+}
+
+.about-hero-content h1 {
+    margin-bottom: 19px;
+
+    font-size: clamp(50px, 6vw, 78px);
+    line-height: 0.98;
+
+    font-weight: 300;
+
+    color: var(--black);
+}
+
+.about-hero-content h1 span {
+    color: var(--orange);
+}
+
+.about-hero-text {
+    max-width: 520px;
+
+    margin-bottom: 30px;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.about-hero-image {
+    position: relative;
+
+    width: 100%;
+
+    overflow: visible;
+}
+
+.about-hero-image img {
+    width: 100%;
+    height: 430px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Orange decorative circle */
+
+.about-hero-image::after {
+    content: "OJI";
+
+    position: absolute;
+
+    left: -18px;
+    bottom: 20px;
+
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--orange);
+
+    color: var(--black);
+
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 600;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
+.about-primary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 13px 21px;
+
+    border-radius: 30px;
+
+    background: var(--black);
+    color: var(--white);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    border: 1px solid var(--black);
+
+    transition: all 0.3s ease;
+}
+
+.about-primary-btn:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: var(--black);
+
+    transform: translateY(-3px);
+}
+
+.about-primary-btn i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   SERVICES SECTION
+========================================================= */
+
+.about-services-section {
+    margin-top: -50px;
+    padding: 110px 0 120px;
+
+    background: var(--black);
+
+    color: var(--white);
+}
+
+.about-services-section .section-title {
+    color: var(--white);
+}
+
+.about-services-section .section-description {
+    color: #bdbdbd;
+}
+
+
+/* =========================================================
+   SERVICE CARDS
+========================================================= */
+
+.service-card {
+    height: 100%;
+
+    padding: 35px 28px;
+
+    border: 1px solid var(--white-border);
+    border-radius: 18px;
+
+    background: #181818;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--orange);
+
+    background: #1c1c1c;
+}
+
+.service-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border-radius: 50%;
+
+    background: var(--orange);
+
+    color: var(--black);
+
+    font-size: 21px;
+}
+
+.service-card h3 {
+    margin-bottom: 13px;
+
+    font-size: 25px;
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    color: var(--white);
+}
+
+.service-card p {
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    color: #aaa;
+}
+
+
+/* =========================================================
+   ACHIEVEMENTS
+========================================================= */
+
+.achievements-heading {
+    margin-top: 100px;
+}
+
+.achievement-card {
+    height: 100%;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border: 1px solid var(--white-border);
+    border-radius: 18px;
+
+    background: #181818;
+
+    transition: all 0.35s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--orange);
+}
+
+.achievement-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    background: var(--orange);
+
+    color: var(--black);
+
+    font-size: 19px;
+}
+
+.achievement-card h3 {
+    margin-bottom: 5px;
+
+    font-size: 32px;
+
+    font-weight: 500;
+
+    color: var(--orange);
+}
+
+.achievement-card p {
+    margin: 0;
+
+    font-size: 12px;
+
+    color: #aaa;
+}
+
+
+/* =========================================================
+   REVIEWS SECTION
+========================================================= */
+
+.about-reviews-section {
+    /* margin-top: -100px; */
+    padding: 110px 0 120px;
+
+    background: var(--cream);
+
+    color: var(--black);
+}
+
+.about-reviews-section .section-title {
+    color: var(--black);
+}
+
+
+/* =========================================================
+   REVIEW CARDS
+========================================================= */
+
+.review-card {
+    height: 100%;
+
+    padding: 35px 30px;
+
+    border-radius: 18px;
+
+    background: var(--white);
+
+    border: 1px solid var(--light-border);
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.10);
+}
+
+.review-stars {
+    margin-bottom: 20px;
+
+    color: var(--orange);
+
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+
+.review-card > p {
+    min-height: 110px;
+
+    margin-bottom: 25px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 17px;
+    line-height: 1.6;
+
+    color: #333;
+}
+
+
+/* =========================================================
+   CUSTOMER INFORMATION
+========================================================= */
+
+.customer-info {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(17, 17, 17, 0.1);
+}
+
+.customer-avatar {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--black);
+
+    color: var(--orange);
+
+    font-size: 17px;
+}
+
+.customer-info h4 {
+    margin: 0 0 3px;
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    color: var(--black);
+}
+
+.customer-info span {
+    font-size: 11px;
+
+    color: #777;
+}
+
+
+/* =========================================================
+   GENERAL ORANGE HIGHLIGHT
+========================================================= */
+
+.orange-text {
+    color: var(--orange);
+}
+
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+    background: var(--orange);
+    color: var(--black);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--black);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--orange);
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .oji-navbar {
+        padding: 12px 0;
+    }
+
+    .navbar-collapse {
+        margin-top: 15px;
+
+        padding: 15px;
+
+        border-radius: 15px;
+
+        background: var(--cream);
+
+        border: 1px solid rgba(17, 17, 17, 0.1);
+    }
+
+    .oji-nav-link {
+        padding: 10px 5px !important;
+    }
+
+    .oji-nav-button {
+        margin-top: 8px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .about-hero-section {
+        min-height: auto;
+
+        padding-top: 150px;
+        padding-bottom: 80px;
+    }
+
+    .about-hero-content {
+        max-width: 100%;
+    }
+
+    .about-hero-content h1 {
+        font-size: 58px;
+    }
+
+    .about-hero-image {
+        margin-top: 20px;
+    }
+
+    .about-hero-image img {
+        height: 400px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .about-hero-section {
+        padding: 125px 0 70px;
+    }
+
+    .about-hero-content {
+        text-align: left;
+    }
+
+    .about-hero-content h1 {
+        font-size: 48px;
+    }
+
+    .about-hero-text {
+        font-size: 13px;
+    }
+
+    .about-hero-image img {
+        height: 300px;
+        border-radius: 15px;
+    }
+
+    .about-hero-image::after {
+        width: 62px;
+        height: 62px;
+
+        left: -8px;
+        bottom: 15px;
+
+        font-size: 17px;
+    }
+
+    .about-services-section,
+    .about-reviews-section {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        font-size: 40px;
+    }
+
+    .section-description {
+        font-size: 13px;
+    }
+
+    .service-card,
+    .achievement-card,
+    .review-card {
+        padding: 28px 22px;
+    }
+
+    .achievements-heading {
+        margin-top: 70px;
+    }
+
+    .review-card > p {
+        min-height: auto;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .oji-logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .brand-title {
+        font-size: 16px;
+    }
+
+    .brand-subtitle {
+        font-size: 7px;
+    }
+
+    .about-hero-content h1 {
+        font-size: 42px;
+    }
+
+    .about-hero-image img {
+        height: 250px;
+    }
+
+    .section-title {
+        font-size: 35px;
+    }
+
+    .about-primary-btn {
+        padding: 12px 17px;
+    }
+
+    .service-card h3 {
+        font-size: 22px;
+    }
+}
+
+
+
+@media (min-width: 992px) {
+    .about-services-section .section-title {
+        font-size: 46px;
+    }
+}
+
+
+/* =========================================================
+   TABLET - 2 CARDS PER ROW
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* Service cards */
+    .about-services-section .row.g-4 > .col-md-6 {
+        width: 50%;
+    }
+
+    /* Achievement cards */
+    .about-services-section .row.g-4.mt-4 > .col-md-6 {
+        width: 50%;
+    }
+
+}
+
+/* =========================================================
+   MOBILE - ACHIEVEMENT CARDS 2 PER ROW ONLY
+========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Achievement cards only */
+
+    .achievement-card {
+        padding: 25px 15px;
+    }
+
+    /* Achievement row only */
+
+    .achievements-heading + .row > .col-md-6 {
+        width: 50%;
+    }
+
+}
+
+
+
+
+
+
+/* footer */
+/* =========================================
+   OJI SIMPLE FOOTER
+========================================= */
+
+.oj-simple-footer {
+    width: 100%;
+
+    padding: 38px 20px 32px;
+
+    background: #000000;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.oj-footer-social {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+
+    margin-bottom: 32px;
+}
+
+.oj-footer-social a {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 30px;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.oj-footer-social a:hover {
+
+    color: #f4c542;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   LOCATION
+========================================= */
+
+.oj-footer-location {
+
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+.oj-footer-location strong {
+
+    color: #f4c542;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.oj-footer-description {
+
+    margin: 0 0 30px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.oj-footer-contact {
+
+    margin: 0 0 27px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    line-height: 1.4;
+}
+
+.oj-footer-contact strong {
+
+    color: #f7f6fa;
+
+    font-weight: 700;
+}
+
+.oj-footer-contact a {
+
+    color: #f4c542;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.oj-footer-contact a:hover {
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   COPYRIGHT
+========================================= */
+
+.oj-footer-copy {
+
+    margin: 3px 0 0;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    line-height: 1.5;
+}
+
+.oj-footer-copy a {
+
+    color: #f4c542;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.oj-footer-copy a:hover {
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .oj-simple-footer {
+
+        padding: 35px 18px 28px;
+    }
+
+    .oj-footer-social {
+
+        gap: 24px;
+
+        margin-bottom: 28px;
+    }
+
+    .oj-footer-social a {
+
+        font-size: 27px;
+    }
+
+    .oj-footer-location {
+
+        font-size: 18px;
+    }
+
+    .oj-footer-description {
+
+        font-size: 17px;
+
+        margin-bottom: 27px;
+    }
+
+    .oj-footer-contact {
+
+        font-size: 17px;
+
+        margin-bottom: 23px;
+    }
+
+    .oj-footer-copy {
+
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .oj-simple-footer {
+
+        padding: 30px 15px 25px;
+    }
+
+    .oj-footer-social {
+
+        gap: 22px;
+
+        margin-bottom: 25px;
+    }
+
+    .oj-footer-social a {
+
+        font-size: 25px;
+    }
+
+    .oj-footer-location {
+
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+    .oj-footer-description {
+
+        font-size: 15px;
+
+        line-height: 1.6;
+
+        margin-bottom: 25px;
+    }
+
+    .oj-footer-contact {
+
+        font-size: 16px;
+
+        line-height: 1.6;
+
+        margin-bottom: 20px;
+    }
+
+    .oj-footer-copy {
+
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+}
+
+
+
+/* FOOTER2 */
+
+.portfolio-footer {
+    width: 100%;
+    background: #0b0b0b;
+    color: #ffffff;
+    text-align: center;
+
+    padding: 40px 0 25px;
+
+    border-top: 3px solid #292929;
+}
+
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 24px;
+
+    margin-bottom: 25px;
+}
+
+
+.footer-social a {
+    color: #ffffff;
+
+    font-size: 27px;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+}
+
+
+.footer-social a:hover {
+    color: #ffd43b;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   LOCATION
+===================================================== */
+
+.footer-location {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+.footer-location span {
+    color: #ffd43b;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.footer-description {
+    margin: 0 auto 25px;
+
+    max-width: 850px;
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   EMAIL + PHONE
+===================================================== */
+
+.footer-contact {
+    margin: 0 0 15px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+}
+
+
+.footer-contact strong {
+    color: #ffd43b;
+
+    font-weight: 700;
+}
+
+
+.footer-contact a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+
+.footer-contact a:hover {
+    color: #ffd43b;
+}
+
+
+/* =====================================================
+   COPYRIGHT
+===================================================== */
+
+.footer-copyright {
+    margin: 30px 0 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    color: #dce4f0;
+
+    font-size: 14px;
+}
+
+
+.footer-copyright a {
+    color: #ffd43b;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.footer-copyright a:hover {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .portfolio-footer {
+        padding: 35px 20px 25px;
+    }
+
+    .footer-social {
+        gap: 22px;
+    }
+
+    .footer-location {
+        font-size: 17px;
+    }
+
+    .footer-description {
+        font-size: 16px;
+        max-width: 700px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767px) {
+
+    .portfolio-footer {
+        padding: 30px 15px 20px;
+    }
+
+
+    .footer-social {
+        gap: 18px;
+
+        margin-bottom: 22px;
+    }
+
+
+    .footer-social a {
+        font-size: 23px;
+    }
+
+
+    .footer-location {
+        font-size: 15px;
+
+        line-height: 1.7;
+
+        padding: 0 10px;
+    }
+
+
+    .footer-description {
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        padding: 0 10px;
+
+        margin-bottom: 22px;
+    }
+
+
+    .footer-contact {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .footer-copyright {
+        font-size: 12px;
+
+        line-height: 1.6;
+
+        margin-top: 25px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .footer-social {
+        gap: 16px;
+    }
+
+
+    .footer-social a {
+        font-size: 21px;
+    }
+
+
+    .footer-location {
+        font-size: 14px;
+    }
+
+
+    .footer-description {
+        font-size: 13px;
+    }
+
+
+    .footer-contact {
+        font-size: 13px;
+    }
+    .portfolio-footer {
+        margin-bottom: 0 !important;
+    }
+
+}
